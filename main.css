@@ -1,0 +1,198 @@
+/**COLOR SCHEME
+* blue: #2083bf
+* second blue: #1a5379
+* background: (cloud white) #ecf0f1
+* green color: #55efc4
+**/
+
+
+body{
+    background: #ecf0f1;
+    margin: 0em; 
+    padding: 0em; 
+    line-height: 20px; 
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.loader-div{
+    background: #dfe6e9;
+    clear: both;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2; 
+    overflow-x: hidden; 
+    overflow-y: hidden;
+} 
+
+.loader{
+    margin-left: auto;
+    margin-right: auto; 
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar{
+    background: #1a5379;
+    border: none; 
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 10px 0px; 
+    margin-bottom: 0px; 
+    float: none; 
+}
+
+.navbar-nav{
+    position: absolute; 
+    right: 10px; 
+}
+
+.navbar-form{
+    border: 1px solid black; 
+    width: 70%; 
+}
+
+.navbar-second{
+    background: #2083bf;
+    text-align: CENTER; 
+}
+
+.navbar-under{
+    background: #2083bf;
+    display: inline-flex; 
+}
+
+ul.navbar-under{
+    text-align: CENTER; 
+    vertical-align: middle !important;
+}
+
+li.navbar-under{
+    display: inline-flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    -ms-flex-direction: column; 
+    padding: 0px 30px !important; 
+}
+
+.main-links{
+    padding: 0px 30px; 
+}
+
+.search-form{
+    width: 70%; 
+    padding-top: 10px;
+    transform: translateX(9%);
+}
+
+.glyphicon-search{
+    right: 20%; 
+}
+
+a{
+   color: white; 
+}
+
+a:hover{
+   color: lightgrey; 
+}
+
+a:visited, a:active, a:focus, a:hover{
+    background: none !important; 
+}
+
+.showme-div{
+  width: 100%; 
+  text-align: CENTER; 
+}
+
+.showme-text{
+    margin-bottom: 15px; 
+}
+
+.container-label{
+    display: inline-flex; 
+    padding: 0px 20px; 
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 5px 5px 0;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group {
+    z-index: 2;
+    margin-left: -1px;
+    height: 34px;
+}
+
+/*************** STYLES SPECIFICALLY FOR SELLER INFORMATION PAGE ******************/
+
+.title-text{
+    text-align: CENTER; 
+    margin-top: 50px; 
+    margin-bottom: 30px; 
+}
+
+.paragraph-text{
+    text-align: CENTER; 
+    font-size: 20px; 
+    
+}
+
+#SI-img{
+    width: 100%;
+    height: 50%;
+    margin-top: 30px; 
+}
+
+.SI-info-boxes{
+    list-style-type: none;  
+    margin-top: 35px; 
+    padding-inline-start: 0px;
+    
+}
+
+.SI-info-boxes-li{
+    margin-top: 30px;
+    background: #f9f9f9; 
+    border-radius: 3px; 
+    padding-left: 180px;
+    padding-right: 50px;
+}
+
+.SI-info-boxes-span{
+    padding: 5px; 
+}
+
+.SI-info-boxes-p{
+    margin-left: 10px; 
+}
+
+.fa-user-plus, .fa-shipping-fast, .fa-clock{
+    position: absolute;
+    vertical-align: middle;
+    left: 50px; 
+    margin-top: 30px;
+    font-size: 90px; 
+    color: lightgrey;
+}
+
+.SI-bottom-text{
+    margin-top: 80px; 
+    text-align: CENTER;
+    margin-bottom: 400px;
+}
+
+.TOU-text{
+    margin-top: 25px;
+    margin-left: 15px; 
+}
+
+a:hover{
+    cursor: pointer; 
+}
