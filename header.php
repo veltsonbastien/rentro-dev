@@ -69,16 +69,16 @@
             </div>
             </form>
             <ul class='nav navbar-nav'>
+            <li><a href='#'>Sell</a></li>
             <li><a href='#'>Sign In</a></li>
-            <li><a href='#'></a></li>
             </ul>
         </div>
         </nav>
         <nav class='navbar-second'>
             <ul class='nav navbar-under'>
             <li class = 'main-links'><a href='seller-information.php'>I'm a Seller</a></li>
-            <li class = 'main-links'><a href='#'>I'm a Buyer</a></li>
-            <li class = 'main-links'><a href='#'>Customer Services</a></li>
+            <li class = 'main-links'><a href='buyer-information.php'>I'm a Buyer</a></li>
+            <li class = 'main-links'><a href='customer-service.php'>Customer Services</a></li>
             </ul>
         </nav>   
 "; 

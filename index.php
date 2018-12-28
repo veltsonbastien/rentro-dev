@@ -16,11 +16,12 @@
                 <input type="checkbox">
                 <span class="checkmark"></span>
                 </label>
-                <label class="container-label">Nearest To Me
+                <label class="container-label">Duration
                 <input type="checkbox">
                 <span class="checkmark"></span>
                 </label>
          </div>
- </body> 
-</html> 
+<?php
+ include 'footer.php'; 
+?> 
 

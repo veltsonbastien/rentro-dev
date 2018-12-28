@@ -14,6 +14,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
+
 .loader-div{
     background: #dfe6e9;
     clear: both;
@@ -163,7 +164,21 @@ input[type=checkbox], input[type=radio] {
     border-radius: 3px; 
     padding-left: 180px;
     padding-right: 50px;
+    transition: box-shadow 0.3s; 
+    transition: transform 0.3s; 
+    transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
 }
+
+.SI-info-boxes-li:hover{
+    box-shadow: 0.1px 0.1px 10px #999; 
+    transform: scale(1.01); 
+    cursor: pointer; 
+}
+
+
 
 .SI-info-boxes-span{
     padding: 5px; 
@@ -173,7 +188,8 @@ input[type=checkbox], input[type=radio] {
     margin-left: 10px; 
 }
 
-.fa-user-plus, .fa-shipping-fast, .fa-clock{
+.fa-user-plus, .fa-shipping-fast, .fa-clock,
+.fa-shopping-cart, .fa-smile, .fa-exchange-alt{
     position: absolute;
     vertical-align: middle;
     left: 50px; 
@@ -185,7 +201,6 @@ input[type=checkbox], input[type=radio] {
 .SI-bottom-text{
     margin-top: 80px; 
     text-align: CENTER;
-    margin-bottom: 400px;
 }
 
 .TOU-text{
@@ -195,4 +210,123 @@ input[type=checkbox], input[type=radio] {
 
 a:hover{
     cursor: pointer; 
+}
+
+.SI-bottom-button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    background-color: #2083bf;
+    border-color: #2083bf;
+    border-radius: 3px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 50px;
+} 
+
+.SI-bottom-button:hover{
+    transition-timing-function: linear;
+    transition: background-color 0.7s; 
+    transition: border 0.7s; 
+    transition: box-shadow 0.7s; 
+    background-color: #1a5379; 
+    border-color: #1a5379; 
+    box-shadow: 0.5px 1.5px 10px #999;
+}
+
+/***** MOSTLY FOR THE CUSTOMER SERVICE PAGE **/
+
+.CS-top-text{
+    text-align: CENTER;
+    margin-top: 15px;
+    color: #555;
+}
+
+.CS-ul{
+  list-style-type: none;
+  margin-top: 50px;
+  display: inline-flex;
+  padding-inline-start: 0em; 
+}
+
+.CS-li{ 
+    box-shadow: none; 
+    background: #fff;
+    margin-left: 10px;
+    padding: 30px 20px;
+    border-radius: 5px;
+    justify-content: center;
+    transition: box-shadow 0.3s; 
+    transition: transform 0.3s; 
+    transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+}
+
+.CS-li:hover{
+    box-shadow: 0.1px 0.1px 10px #999; 
+    transform: scale(1.015); 
+    cursor: pointer; 
+}
+
+.CS-li-h3{
+    margin-top: 10px; 
+}
+
+.fa-file, .fa-phone-square, .fa-envelope{
+   color: #2083bf;
+   font-size: 60px;
+   margin-bottom: 10px; 
+}
+
+
+/**MOSTLY FOR THE FOOTER ***/ 
+
+.navFooter{
+      position: relative;
+      clear: both; 
+      width: 100%; 
+      background: #1a5379;
+      padding: 10px;
+      text-align: CENTER;
+      color: grey;
+      margin-top: 11%;
+      bottom: 0;
+      left: 0; 
+}
+
+.navFooter-ul{
+      padding-inline-start: 0em; 
+      margin-block-start: 0em; 
+      list-style-type: none; 
+      display: inline-flex;
+      width: 70%; 
+      margin-top: 30px; 
+      margin-bottom: 30px; 
+      margin-left: 15%; 
+      margin-right: 15%;  
+}
+
+.navFooter-li-primary{
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    opacity: 0.7; 
+}
+
+.navFooter-li-secondary{
+    font-size: 12px;
+    display: list-item;
+    text-align: CENTER;
+} 
+
+.first-link{
+    margin-top: 10px; 
+}
+
+.bottom-nav:hover{
+  text-decoration: none; 
 }

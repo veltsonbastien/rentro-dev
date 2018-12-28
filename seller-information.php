@@ -37,10 +37,10 @@
            </ul>
             <h4 class = "TOU-text"> Also, please take some time to read the <a style = "color: #2083bf;">Terms of Use</a></h4>
             <h2 class = "SI-bottom-text"> And that's it. Ready to get started? </h2> 
-
+            <button class = "SI-bottom-button">Register Now </button> 
         </div>
-        
+                
+<?php
+ include 'footer.php'; 
+?> 
 
-        
- </body>
- <html>
