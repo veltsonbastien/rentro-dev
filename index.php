@@ -7,7 +7,7 @@
         <div class = "container-fluid"> 
            <h1 class = "display-1"> Newest Deals </h1>
            <div class = "showme-div">   
-           <h3 class = "showme-text"> Show me items: </h2>
+           <h3 class = "showme-text"> Show me items: </h3>
                 <label class="container-label">Lowest Price
                 <input type="checkbox" checked="checked">
                 <span class="checkmark"></span>

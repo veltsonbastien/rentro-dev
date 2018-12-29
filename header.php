@@ -70,7 +70,7 @@
             </form>
             <ul class='nav navbar-nav'>
             <li><a href='#'>Sell</a></li>
-            <li><a href='#'>Sign In</a></li>
+            <li><a href='signin.php'>Sign In</a></li>
             </ul>
         </div>
         </nav>

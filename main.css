@@ -330,3 +330,62 @@ a:hover{
 .bottom-nav:hover{
   text-decoration: none; 
 }
+
+/************* MOSTLY FOR SIGNIN FORM *************/
+.signin-form-ul{
+    list-style-type: none;
+    display: block; 
+    padding-inline-start: 0em;
+    margin-block-start: 0em;
+}
+
+.signin-form-li{
+    margin-top: 20px;
+    display: grid;
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.signin-input{
+  padding: 5px; 
+}
+
+.signin-input-pin{
+    width: 10%;
+    text-align: CENTER;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 0.1px solid #999;
+}
+
+.signin-label-pin{
+    text-align: CENTER;
+}
+
+.create-account-link{
+    color: #2083bf; 
+    text-align: CENTER; 
+    font-size: 18px; 
+}
+
+.create-account-link:hover{
+    cursor: pointer; 
+    color: #1a5379; 
+    text-decoration: none; 
+}
+
+/** MOSTLY FOR CREATE ACCOUNT PAGE **/
+
+.signin-label-pn{
+}
+
+.signin-input-pn{
+    width: 15%;
+    border: 0.1px solid #999;
+}
+
+.info-text{
+    font-size: 12px;
+    font-style: italic;
+}
