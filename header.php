@@ -49,7 +49,10 @@
     <!--INTERNAL SCRIPTS -->
      <script>
         $(document).ready(function(){
-            $('.loader-div').fadeOut(1500); 
+            $('.loader-div').fadeOut(1500);
+            $('.open-acct-modal').click(function(){
+               $('.acct-small-modal').slideToggle('1000', 'swing'); 
+            }); //open modal  
         }); 
      </script>
  </head>
@@ -76,15 +79,28 @@
          if(isset($_SESSION['acct-id'])){
           echo "
             <ul class='nav navbar-nav'>
-            <li><a href='#'>Sell</a></li>
-            <li><a class = 'open-acct-modal'>Your Account</a></li>
+            <li><a class = 'upper-main-links' href='#'>Sell</a></li>
+            <li><a class = 'upper-main-links open-acct-modal'>Your Account</a></li>
             </ul>
+            <div class = 'acct-small-modal'>
+              <ul class = 'acct-small-modal-ul'> 
+               <li class = 'acct-small-modal-li'><a class = 'acct-small-modal-a'> Account Information </a> </li> 
+               <li class = 'acct-small-modal-li'> <a class = 'acct-small-modal-a'> Your Orders </a>  </li>
+               <li class = 'acct-small-modal-li'> <a class = 'acct-small-modal-a'> Your Items </a> </li> 
+               <li class = 'acct-small-modal-li'> 
+                 <form method = 'POST' action = '".logoutUser()."'> 
+                  <button class = 'logout-button' name = 'logout-button' > Sign Out </button> 
+                 </form>  
+               </li> 
+              </ul> 
+            </div> 
+
             ";
          } else {
            echo "
             <ul class='nav navbar-nav'>
-            <li><a href='#'>Sell</a></li>
-            <li><a href='signin.php'>Sign In</a></li>
+            <li><a class = 'upper-main-links' href='#'>Sell</a></li>
+            <li><a class = 'upper-main-links' href='signin.php'>Sign In</a></li>
             </ul>
           "; 
          }
@@ -93,9 +109,9 @@ echo"
         </nav>
         <nav class='navbar-second'>
             <ul class='nav navbar-under'>
-            <li class = 'main-links'><a href='seller-information.php'>I'm a Seller</a></li>
-            <li class = 'main-links'><a href='buyer-information.php'>I'm a Buyer</a></li>
-            <li class = 'main-links'><a href='customer-service.php'>Customer Services</a></li>
+            <li class = 'main-links'><a class = 'lower-main-links' href='seller-information.php'>I'm a Seller</a></li>
+            <li class = 'main-links'><a class = 'lower-main-links' href='buyer-information.php'>I'm a Buyer</a></li>
+            <li class = 'main-links'><a class = 'lower-main-links' href='customer-service.php'>Customer Services</a></li>
             </ul>
         </nav>   
 "; 

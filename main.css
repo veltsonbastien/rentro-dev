@@ -79,6 +79,10 @@ li.navbar-under{
     padding: 0px 30px !important; 
 }
 
+.upper-main-links:hover, .lower-main-links:hover{
+ color: lightgrey !important;
+}
+
 .main-links{
     padding: 0px 30px; 
 }
@@ -97,8 +101,8 @@ a{
    color: white; 
 }
 
-a:hover{
-   color: lightgrey; 
+.main-links:hover{
+   color: lightgrey !important; 
 }
 
 a:visited, a:active, a:focus, a:hover{
@@ -389,3 +393,60 @@ a:hover{
     font-size: 12px;
     font-style: italic;
 }
+
+.acct-small-modal::before{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ecf0f1 transparent;
+}
+
+.acct-small-modal{
+ position: absolute;
+    top: 60px;
+    right: 12px;
+    background: #ecf0f1;
+    padding: 10px 10px 15px 10px;
+    border: 1px solid grey;
+    border-radius: 5px; 
+    display: none; 
+}
+
+
+.acct-small-modal-ul{
+  padding-inline-start: 0em; 
+  list-style-type: none; 
+  text-align: CENTER;
+}
+
+.acct-small-modal-li{
+    margin-top: 10px;
+    padding: 7.5px 5px; 
+    border-radius: 3px; 
+}
+
+.acct-small-modal-li:hover{
+    background: lightgrey; 
+}
+
+.acct-small-modal-a{
+  color: #1a5379;
+}
+
+.acct-small-modal-a:hover{
+    color: #2083bf !important;
+    text-decoration: none !important; 
+}
+
+.logout-button{
+    background: none;
+    border: none;
+    color: #1a5379;
+    margin-bottom: -15px;
+    outline: none; 
+}
+

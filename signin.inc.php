@@ -21,7 +21,7 @@ function loginUser($conn){
            $_SESSION['acct-em'] = $row['accountEM']; 
            $_SESSION['acct-pw'] = $row['accountPW']; 
            $_SESSION['acct-pn'] = $row['accountPN']; 
-           header("Location: index.php?authentication=".$_SESSION['acct-id']);
+           header("Location: index.php?authentication=true");
            exit(); 
         }//end of checking if the password and pin are correct 
      } //end of while 
@@ -32,3 +32,11 @@ function loginUser($conn){
      }//end of else there is no result
   } //end of isset
 }//end 
+
+function logoutUser(){
+   if(isset($_POST['logout-button'])){
+      session_unset(); 
+      session_destroy(); 
+      header("Loaction: index.php"); 
+   }
+}
