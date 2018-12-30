@@ -1,6 +1,6 @@
  
 function generatePID(){
- var d = new Date(); 
+ $d = new Date(); 
  var x = d.getTime().toString(); 
  var m = d.getMonth(); 
  var da = d.getDate().toString();
@@ -33,12 +33,8 @@ for(var i = 0; i<daa.length; i++){
          di++; 
      }
  }
-
  p = cm[0].concat(x).concat(cm[1]); 
  p = p.toUpperCase(); 
-
- document.write(p); 
-
  return p; 
 }
 
@@ -80,9 +76,7 @@ for(var i = 0; i<daa.length; i++){
 
  p = cm[1].concat(x).concat(cm[0]); 
  p = p.toUpperCase(); 
-
- document.write(p);
-
+ 
  return p;  
 }
 
@@ -124,8 +118,5 @@ for(var i = 0; i<daa.length; i++){
 
  p = cm[1].concat(x).concat(cm[0]); 
  p = p.toUpperCase(); 
-
- document.write(p); 
-
  return p; 
 }
