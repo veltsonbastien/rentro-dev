@@ -2,7 +2,8 @@
   include 'dbh.inc.php'; 
   include 'signup.inc.php'; 
   include 'signin.inc.php'; 
-
+ 
+  if(isset($_SESSION['email']) && isset($_SESSION['pwd']) && isset($_SESSION['pin'])){
   echo"
   <head>
   <!--METAS-->
@@ -72,23 +73,10 @@
                 </div>
             </div>
             </form>
- "; 
-         if(isset($_SESSION['acct-id'])){
-          echo "
             <ul class='nav navbar-nav'>
             <li><a href='#'>Sell</a></li>
-            <li><a class = 'open-acct-modal'>Your Account</a></li>
+            <li><a class = 'open-acct-modal'>Your Acccount</a></li>
             </ul>
-            ";
-         } else {
-           echo "
-            <ul class='nav navbar-nav'>
-            <li><a href='#'>Sell</a></li>
-            <li><a href='signin.php'>Sign In</a></li>
-            </ul>
-          "; 
-         }
-echo"
         </div>
         </nav>
         <nav class='navbar-second'>
@@ -99,3 +87,8 @@ echo"
             </ul>
         </nav>   
 "; 
+} //only show the sign in header if there is a session started 
+else {
+  location("Location: index.php"); 
+  exit(); 
+}

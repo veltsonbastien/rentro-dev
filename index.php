@@ -1,4 +1,5 @@
  <?php
+  session_start(); 
  include 'header.php'; 
  ?>   
         <div class = "loader-div" style = "display:block">
