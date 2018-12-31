@@ -17,7 +17,7 @@
      <li class = 'signin-form-li'><label class = 'signin-label'>First Name:</label><input class = 'signin-input' type = 'text' name = 'firstname' placeholder = 'First Name'></li> 
      <li class = 'signin-form-li'><label class = 'signin-label'>Last Name:</label><input class = 'signin-input' type = 'text' name = 'lastname' placeholder = 'Last Name'></li> 
      <li class = 'signin-form-li'><label class = 'signin-label'>Email:</label> <input class = 'signin-input' type = 'email' name = 'email'  placeholder = 'Please enter your email'> </li> 
-     <li class = 'signin-form-li'><label class = 'signin-label signin-label-pn'>Phone Number:</label> <input class = 'signin-input signin-input-pn' type = 'text' name = 'phonenumber'  placeholder = '(123)-456-9780'> </li>
+     <li class = 'signin-form-li'><label class = 'signin-label signin-label-pn'>Phone Number:</label> <input class = 'signin-input signin-input-pn' type = 'text' name = 'phonenumber'  placeholder = '(123)-456-9780' maxlength='11'> </li>
      <li class = 'signin-form-li'><p class = 'info-text'>For your online safety, it is recommended that your password follows the guidelines: <br> 
                                                          * More than 6 characters <br> 
                                                          * A combination of numbers, letters, and special characters <br> 

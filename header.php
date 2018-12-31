@@ -2,7 +2,8 @@
   include 'dbh.inc.php'; 
   include 'signup.inc.php'; 
   include 'signin.inc.php'; 
-
+  include 'submit-item.inc.php';
+  
   echo"
   <head>
   <!--METAS-->
@@ -79,7 +80,7 @@
          if(isset($_SESSION['acct-id'])){
           echo "
             <ul class='nav navbar-nav'>
-            <li><a class = 'upper-main-links' href='#'>Sell</a></li>
+            <li><a class = 'upper-main-links' href='sell.php'>Sell</a></li>
             <li><a class = 'upper-main-links open-acct-modal'>Your Account</a></li>
             </ul>
             <div class = 'acct-small-modal'>
@@ -99,7 +100,7 @@
          } else {
            echo "
             <ul class='nav navbar-nav'>
-            <li><a class = 'upper-main-links' href='#'>Sell</a></li>
+            <li><a class = 'upper-main-links' href='sell.php'>Sell</a></li>
             <li><a class = 'upper-main-links' href='signin.php'>Sign In</a></li>
             </ul>
           "; 

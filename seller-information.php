@@ -18,7 +18,7 @@
                   <span class = "SI-info-boxes-span">
                    <i class="fas fa-user-plus"></i>
                    <h3 class = "SI-infoboxes-h3"> Register </h3> 
-                   <p class = "SI-info-boxes-p"> If you haven't already, create an account. Then you will simply register your device. Don't worry, there will be steps on how to do it to best ensure the safety of your device and the satisfaction of the costumer who uses it. Registering should take about 15 minutes.  </p> 
+                   <p class = "SI-info-boxes-p"> If you haven't already, create an account. Then you will simply register your item. Don't worry, there will be steps on how to do it to best ensure the safety of your device and the satisfaction of the costumer who uses it. Registering should take about 15 minutes.  </p> 
                   </span>
               </li>
               <li class = "SI-info-boxes-li"> 

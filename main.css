@@ -450,3 +450,118 @@ a:hover{
     outline: none; 
 }
 
+/****** MOSTLY FOR SELL PAGE ****/
+
+.register-div{
+
+}
+
+.register-div-ul{
+  list-style-type: none;
+  padding-inline-start: 0em;
+  margin-block-start: 0em; 
+}
+
+.register-div-li{
+  display: grid; 
+  width: 50%; 
+  margin-left: 50%; 
+  transform: translateX(-50%); 
+  margin-top: 20px;
+}
+
+.register-div-input{
+  padding: 5px; 
+  margin-top:10px; 
+}
+
+.register-div-input-ls{
+    width: 7.5%;
+    text-align: -WEBKIT-CENTER;
+    margin-left: 50%;
+    transform: translateX(-50%);  
+}
+
+.register-div-input-rp{
+    width: 10%;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%); 
+}
+
+.sell-upper-texts{
+    display: inline-flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#register-text{
+ margin-right: 10px; 
+ transition: transform 0.5s; 
+}
+
+#register-text:hover, #save-text:hover{
+  cursor: pointer; 
+  transform: scale(1.03); 
+}
+
+#text-seperator{
+    opacity: 0.5;
+    font-size: 18px;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#save-text{
+ margin-left: 10px; 
+  transition: transform 0.5s; 
+}
+
+.isSelected{
+    opacity: 1;
+    transform: scale(1.03); 
+}
+
+.notSelected{
+    opacity: 0.5; 
+    transform: scale(0.95); 
+}
+
+/*** confirm item page ***/
+
+.confirm-item{
+    width: 29%;
+    margin-top: 50px;
+    display: inline-block;
+    flex-wrap: wrap;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.confirm-item-ul{
+  background: #fff;
+  list-style-type: none;
+  padding-inline-start: 0em;
+  margin-block-start: 0em; 
+  border-radius: 3px; 
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+}
+
+.confirm-item-li{
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px; 
+    width:50%; 
+}
+
+.confirm-item-label{
+   margin-left: 10px;
+   margin-bottom: -4px; 
+}
+
+.confirm-item-name{
+    font-size: 25px; 
+    margin-bottom: 20px; 
+    margin-left: 0px; 
+}

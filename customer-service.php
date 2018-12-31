@@ -9,8 +9,8 @@
         </div>
         <div class = "container-fluid"> 
            <h1 class = "display-1"> Customer Services </h1>
-           <h3 class = "showme-text" style = "text-align: CENTER;"> Unfortunately, sometimes things don't go as planned. We're here to help you with that. </h1>
-           <h4 class = "CS-top-text"> How can we help? </p> 
+           <h3 class = "showme-text" style = "text-align: CENTER;"> Unfortunately, sometimes things don't go as planned. We're here to help you with that. </h3>
+           <h4 class = "CS-top-text"> How can we help? </h4> 
            <ul class = "CS-ul"> 
               <li class = "CS-li"> 
                   <i class="far fa-file"></i>
