@@ -7,6 +7,7 @@
  echo "
  <script> 
   $(document).ready(function(){
+      $('#save-text').addClass('notSelected');
       $('#register-text').click(function(){
           $(this).removeClass('notSelected'); 
           $(this).addClass('isSelected');
@@ -34,7 +35,7 @@
                                                                   To preserve our customer's best interests, items will be verified by Rentro before they are posted online for sale. </h4> 
            
            
-           <form class = 'register-div' method = 'POST' action = '".productSubmit($conn)."'> 
+           <form class = 'register-div' method = 'POST' enctype='multipart/form-data' action = '".productSubmit($conn)."'> 
              <ul class = 'register-div-ul'> 
                 <li class = 'signin-form-li'><p class = 'info-text'>Please make sure that the item name is as close to the original name of the item as possible. <br> </p></li>
                 <li class = 'register-div-li'><label class = 'signin-label'>Item Name:</label><input class = 'register-div-input' type = 'text' name = 'product-name'></li> 
@@ -47,17 +48,22 @@
                      <li class = 'signin-form-li'><p class = 'info-text'>Next, you will enter how long you plan to rent out this item for. Remember: <br> 
                                                          * Please do not rent out your item for longer than you know you will not need it. Take time to consider how long you want to rent out. <br> </p></li>
                 <li class = 'register-div-li'><label class = 'signin-label'>How long do you want to rent this item out for (in weeks) ?</label><input class = 'register-div-input register-div-input-ls' type = 'text' name = 'product-ls' maxlength='3' placeholder='###'></li>
-                     <li class = 'signin-form-li'><p class = 'info-text'> Finally, you will enter a replacement price for your item. When doing this, please note: <br> 
+                     <li class = 'signin-form-li'><p class = 'info-text'> Next, you will enter a replacement price for your item. When doing this, please note: <br> 
                                                          * This price is calcuated by you. Based on the pictures you send, and the original market price of the item, Rentro staff will check your price's fairness, not its exactness. <br> 
                                                          * Please be sure to include the total prices of all included accessories in your replacement price.<br> 
                                                          * If you are confused on anything, or simply want more information, please be sure to refer to the Terms of Use, specifically the section on the Replacement Price verifying process, or you can contact Customer Services. <br> </p></li>
-                <li class = 'register-div-li'><label class = 'signin-label'>Replacement Price for this item: </label><input class = 'register-div-input register-div-input-rp' type = 'text' name = 'product-rp' maxlength='6' placeholder='$$$$$' value = '$'></li>  
-             </ul> 
+                <li class = 'register-div-li'><label class = 'signin-label'>Replacement Price for this item: </label><input class = 'register-div-input register-div-input-rp' type = 'text' name = 'product-rp' maxlength='6' placeholder='$'></li>  
+           <li class = 'register-div-li'><p class = 'info-text'> Finally, you will take some pictures of your item, to go with your registration. Please note that: <br> 
+                                                         *Taking pictures helps both you and the person who rents this item. By uploading pictures, you can verify the condition of your device at the time of registration, while also allowing consumers and Rentro staff to see the physical condition of your item.  <br> 
+                                                         *Please try to take the pictures from different angles, to provide a wholesome view of the item. <br> 
+                                                         *IMPORTANT: Make sure to select ALL your images at once upon submit. You will see the number of files submitted. <br> 
+                                                          <br> </p> <label class = 'signin-label'>Upload at least 3 images of your item: </label> <input type='file' class = 'choose-img' name='my_file[]' multiple='multiple'></li>
+            </ul> 
             <h4 class = 'TOU-text' style = 'text-align: CENTER; margin-bottom: 10px; margin-top: 80px;'> By submitting, you agree to the full <a style = 'color: #2083bf;'>Terms of Use</a></h4>
             <h2 class = 'SI-bottom-text' style = 'margin-top: 80px '> All finished?  </h2> 
             <button class = 'SI-bottom-button' name = 'submitProduct'>Register</button> 
              <h4 class = 'TOU-text' style = 'text-align: CENTER; margin-bottom: 10px; margin-top: 120px; font-size:15px;'>Not ready to post yet? <a style = 'color: #2083bf;'>Save this item instead</a></h4>
-           </form>      
+           </form> 
         </div>
     "; 
    } //end of if isset 

@@ -527,15 +527,23 @@ a:hover{
     transform: scale(0.95); 
 }
 
+.choose-img{
+    margin-left: 50%;
+    transform: translateX(-30%);
+    margin-top: 22px;
+}
+
 /*** confirm item page ***/
 
 .confirm-item{
-    width: 29%;
+    width: 50%;
     margin-top: 50px;
     display: inline-block;
     flex-wrap: wrap;
     margin-left: 50%;
     transform: translateX(-50%);
+    background: white; 
+    border-radius: 10px; 
 }
 
 .confirm-item-ul{
@@ -543,25 +551,135 @@ a:hover{
   list-style-type: none;
   padding-inline-start: 0em;
   margin-block-start: 0em; 
-  border-radius: 3px; 
+  border-radius: 10px; 
   padding-top: 10px; 
   padding-bottom: 10px; 
+  margin-left: 30px; 
+  display: inline-flex;
 }
 
 .confirm-item-li{
     padding: 5px;
     margin-left: 10px;
     margin-bottom: 10px; 
-    width:50%; 
+    margin-top: 5px;
 }
 
 .confirm-item-label{
-   margin-left: 10px;
    margin-bottom: -4px; 
+   margin-top:20px; 
+   font-size: 18px; 
 }
 
 .confirm-item-name{
     font-size: 25px; 
     margin-bottom: 20px; 
-    margin-left: 0px; 
+    text-align: LEFT;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+
+
+img {
+  vertical-align: middle;
+  width:100%;
+  height:300px;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.containers {
+  position: relative;
+  width: 50%;
+  margin-left: -20px;
+  margin-right: 30px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.row{
+    position: relative;
+    justify-content: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+ display: inline-flex;
+ margin-top: 5px
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+#previewIMG{
+    width: 100px; 
+    height: 75px; 
+}
+
+.product-text{
+  width: 50%; 
+  margin-top: 0px; 
+}
+
+#pL{
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: CENTER;
 }

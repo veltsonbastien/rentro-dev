@@ -3,7 +3,7 @@
   include 'signup.inc.php'; 
   include 'signin.inc.php'; 
   include 'submit-item.inc.php';
-  
+
   echo"
   <head>
   <!--METAS-->

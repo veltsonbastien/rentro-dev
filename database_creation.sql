@@ -45,6 +45,7 @@ CREATE TABLE rentro_products(
 ); 
 
 CREATE TABLE rentro_products_images(
+   accountID varchar(255) NOT NULL,
    productID varchar(255) NOT NULL,
    imageSrc varchar(255) NOT NULL 
 ); 

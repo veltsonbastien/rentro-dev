@@ -53,11 +53,37 @@ function productSubmit($conn){
             exit(); 
       } //end of if empty 
         else{
-           $sql = "INSERT into rentro_products_review (accountID, productID, productName, productDesc, productLS, productRP) VALUES 
-                                                      ('$userID','$product_ID','$product_Name','$product_Desc','$product_LS','$product_RP')";
-            mysqli_query($conn,$sql);   
-            //header("Location: confirm-product-submit.php?=submit");
-        } //end of outermost else
+           if (!(isset($_FILES['my_file']))) {
+                 //header("Location: sell.php?form=incomplete"); 
+                // exit(); 
+             } //end of checking files are set  
+              else {
+                    $myFile = $_FILES['my_file'];
+                    $fileCount = count($myFile['name']);
+                        if($fileCount<3){
+                      //      header("Location: sell.php?form=incomplete"); 
+                      //      exit();               
+                        }
+                        else{
+                        $sql = "INSERT into rentro_products_review (accountID, productID, productName, productDesc, productLS, productRP) VALUES 
+                                                                    ('$userID','$product_ID','$product_Name','$product_Desc','$product_LS','$product_RP')";
+                            for ($i = 0; $i < $fileCount; $i++) {
+                                        $fileName = $myFile['name'][$i];
+                                        $tmpName  = $myFile["tmp_name"][$i]; 
+                                        $fileDestination = 'rentro_product_images/'.$fileName; 
+                                        move_uploaded_file($tmpName,$fileDestination);
+                                        $sqlImages = "INSERT into rentro_products_images (accountID, productID,imageSrc) VALUES ('$userID','$product_ID','$fileName')"; 
+                                        mysqli_query($conn,$sqlImages);   
+                                }
+                                        mysqli_query($conn,$sql);   
+                                        echo "
+                                        <script> 
+                                        window.location.replace('confirm-product-submit.php');
+                                        </script>
+                                        ";
+                } //end of else that actually creates 
+              }//end of else 
+           } //end of outermost else
         } //end of isset session
     } //end of isset submitProduct
 }//end of function
