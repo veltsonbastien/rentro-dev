@@ -253,6 +253,7 @@ a:hover{
   margin-top: 50px;
   display: inline-flex;
   padding-inline-start: 0em; 
+  text-align: CENTER;
 }
 
 .CS-li{ 
