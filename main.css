@@ -684,3 +684,26 @@ img {
     margin-top: 10px;
     text-align: CENTER;
 }
+/**********************************/
+
+.rent-out-button{
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 15px;
+    background-color: #2083bf;
+    border-color: #2083bf;
+    border-radius: 3px;
+    padding: 10px 15px;
+    color: white;
+    font-size: 19px;
+    margin-bottom: 50px;
+}
+
+.weeklyPrice{
+    position: absolute;
+    color: #2083bf;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
