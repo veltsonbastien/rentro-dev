@@ -358,6 +358,7 @@ a:hover{
 
 .signin-input-pin{
     width: 10%;
+    min-width: 60px;
     text-align: CENTER;
     margin-left: 50%;
     transform: translateX(-50%);
