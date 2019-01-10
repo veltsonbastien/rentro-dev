@@ -4,7 +4,7 @@
  
  function calculateWeekly($rp, $ls){
   $rpp = 1; 
-  $rpp = (((2.5)*$ls)+(($rp)*(0.0075)))-2; 
+  $rpp = (((2.5)*$ls)+(($rp)*(0.005)))-((0.05)*$ls); 
   return $rpp; 
  }
 
