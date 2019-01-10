@@ -59,3 +59,41 @@ CREATE TABLE rentro_orders(
 );
 
 
+/**OTHER THINGS**/
+
+CREATE TABLE sent_notification(
+   orderID varchar(255) NOT NULL, 
+   ownerID varchar(255) NOT NULL, 
+   buyerID varchar(255) NOT NULL, 
+   sent_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
+
+CREATE TABLE received_notification(
+   orderID varchar(255) NOT NULL, 
+   ownerID varchar(255) NOT NULL, 
+   buyerID varchar(255) NOT NULL, 
+   sent_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
+
+CREATE TABLE sent_back_notification(
+   orderID varchar(255) NOT NULL, 
+   ownerID varchar(255) NOT NULL, 
+   buyerID varchar(255) NOT NULL, 
+   sent_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
+
+CREATE TABLE account_debts(
+   accountID varchar(255) NOT NULL,
+   debtAmount int(255) NOT NULL, 
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
+
+CREATE TABLE debt_statement(
+   accountID varchar(255) NOT NULL, 
+   debtAmount int(255) NOT NULL,
+   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+); 
+
+
+
+
