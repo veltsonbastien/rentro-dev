@@ -22,7 +22,7 @@
                                                          * More than 6 characters <br> 
                                                          * A combination of numbers, letters, and special characters <br> 
                                                          * Mix of capitalized and noncapitalized letters <br> 
-                                                         * Don't repeat the same character more than twice </p></li>
+                                                         * No repeating characters </p></li>
      <li class = 'signin-form-li'><label class = 'signin-label'>Create a Password:</label><input class = 'signin-input' type = 'password' name = 'pwd' placeholder = 'Please enter your password'> </li>
      <li class = 'signin-form-li'><label class = 'signin-label'>Confirm your Password:</label><input class = 'signin-input' type = 'password' name = 'pwd-confirm' placeholder = 'Please confirm your password'> </li>
      <div class = 'pin-class'>
