@@ -360,6 +360,7 @@ a:hover{
 
 .signin-input{
   padding: 5px; 
+  min-width: 200px;
   border: 1px solid #999;
 }
 
@@ -395,7 +396,8 @@ a:hover{
 
 .signin-input-pn{
     width: 15%;
-    border: 0.1px solid #999;
+	min-width: 120px;
+    border: 1px solid #999;
 }
 
 .info-text{
