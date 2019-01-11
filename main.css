@@ -255,10 +255,12 @@ a:hover{
 }
 
 .CS-ul{
+  width: 95%;
   list-style-type: none;
   margin-top: 50px;
   display: inline-flex;
   padding-inline-start: 0em; 
+  justify-content: center;
   text-align: CENTER;
 }
 
