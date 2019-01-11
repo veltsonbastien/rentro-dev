@@ -194,10 +194,11 @@ input[type=checkbox], input[type=radio] {
 
 .fa-user-plus, .fa-shipping-fast, .fa-clock,
 .fa-shopping-cart, .fa-smile, .fa-exchange-alt{
-    position: absolute;
+    position: relative;
     vertical-align: middle;
-    left: 50px; 
-    margin-top: 30px;
+    left: -140px; 
+	top: 105px;
+    margin-top: -75px;
     font-size: 90px; 
     color: lightgrey;
 }
