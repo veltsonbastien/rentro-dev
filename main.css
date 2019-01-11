@@ -107,6 +107,7 @@ a{
 
 a:visited, a:active, a:focus, a:hover{
     background: none !important; 
+	color: #b8c3d8;
 }
 
 .showme-div{
