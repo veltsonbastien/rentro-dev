@@ -162,6 +162,11 @@ input[type=checkbox], input[type=radio] {
     
 }
 
+.SI-inline-link{
+    color:#337ab7;
+    
+}
+
 .SI-info-boxes-li{
     margin-top: 30px;
     background: #f9f9f9; 
