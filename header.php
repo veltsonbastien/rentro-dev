@@ -8,7 +8,7 @@
   <head>
   <!--METAS-->
   <meta charset='UTF-8'>
-  <meta name='description' content='Make money, or save it. You can do that both here.'>
+  <meta name='description' content='Make money, or save it. You can do both here!'>
   <meta name='keywords' content='rent,rental'>
   <meta name='author' content='Quentrum Corp. 2018'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -68,7 +68,7 @@
             </div>
             <form class='search-form navbar-left' action='/action_page.php'>
             <div class='input-group'>
-                <input type='text' class='form-control' placeholder='Looking for something great at a cheap price?' name='search'>
+                <input type='text' class='form-control' placeholder='Looking for something great at a low price?' name='search'>
                 <div class='input-group-btn'>
                 <button class='btn btn-default' type='submit'>
                     <i class='glyphicon glyphicon-search'></i>

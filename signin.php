@@ -16,7 +16,7 @@ include 'header.php';
     <ul class = 'signin-form-ul'> 
      <li class = 'signin-form-li'><label class = 'signin-label'>Email:</label> <input class = 'signin-input' type = 'email' name = 'email'  placeholder = 'Please enter your email'> </li> 
      <li class = 'signin-form-li'><label class = 'signin-label'>Password:</label><input class = 'signin-input' type = 'password' name = 'pwd' placeholder = 'Please enter your password'> </li>
-     <li class = 'signin-form-li'><label class = 'signin-label signin-label-pin'>Pin:</label><input class = 'signin-input signin-input-pin' type = 'password' name = 'pin' placeholder = '####'> </li> 
+     <li class = 'signin-form-li'><label class = 'signin-label signin-label-pin'>Pin:</label><input class = 'signin-input signin-input-pin' type = 'password' name = 'pin' placeholder = '####' maxlength='4'> </li> 
      <li class = 'signin-form-li'><input class = 'SI-bottom-button' type = 'submit' name = 'signIn' value = 'Sign In'> </li> 
     </ul> 
   </form> 

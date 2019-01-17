@@ -162,6 +162,11 @@ input[type=checkbox], input[type=radio] {
     
 }
 
+.SI-inline-link{
+    color:#337ab7;
+    
+}
+
 .SI-info-boxes-li{
     margin-top: 30px;
     background: #f9f9f9; 
@@ -194,10 +199,11 @@ input[type=checkbox], input[type=radio] {
 
 .fa-user-plus, .fa-shipping-fast, .fa-clock,
 .fa-shopping-cart, .fa-smile, .fa-exchange-alt{
-    position: absolute;
+    position: relative;
     vertical-align: middle;
-    left: 50px; 
-    margin-top: 30px;
+    left: -140px; 
+	top: 105px;
+    margin-top: -75px;
     font-size: 90px; 
     color: lightgrey;
 }
@@ -249,10 +255,12 @@ a:hover{
 }
 
 .CS-ul{
+  width: 95%;
   list-style-type: none;
   margin-top: 50px;
   display: inline-flex;
   padding-inline-start: 0em; 
+  justify-content: center;
   text-align: CENTER;
 }
 
@@ -354,14 +362,17 @@ a:hover{
 
 .signin-input{
   padding: 5px; 
+  min-width: 200px;
+  border: 1px solid #999;
 }
 
 .signin-input-pin{
     width: 10%;
+    min-width: 60px;
     text-align: CENTER;
     margin-left: 50%;
     transform: translateX(-50%);
-    border: 0.1px solid #999;
+    border: 1px solid #999;
 }
 
 .signin-label-pin{
@@ -387,7 +398,8 @@ a:hover{
 
 .signin-input-pn{
     width: 15%;
-    border: 0.1px solid #999;
+	min-width: 120px;
+    border: 1px solid #999;
 }
 
 .info-text{
