@@ -10,6 +10,36 @@
 
 
  echo "
+        <style> 
+         .product-text{
+           display: none; 
+          }
+          .confirm-item{
+           width: 35%; 
+          }
+          .containers{
+            width: auto; 
+           }
+           .confirm-item{
+             margin-left: 10px; 
+             transform: translateX(0); 
+             transition: box-shadow 0.7s; 
+             transition: transform 0.7s; 
+            }
+            .confirm-item:hover{
+              box-shadow: 0.1px 0.1px 5px #0283bf; 
+              transform: scale(1.01); 
+             }
+
+            .weeklyPrice{
+              position: unset; 
+              top: 0; 
+              right: 0; 
+              margin-left: 25px; 
+              margin-bottom: 15px; 
+            }
+        </style> 
+
         <div class = 'loader-div' style = 'display:block'>
           <div class = 'loader'> </div>
         </div>
@@ -30,6 +60,7 @@
                 <span class='checkmark'></span>
                 </label>
          </div>
+         <div class = 'confirm-item-major' style = 'display: inline-flex' > 
          "; 
 
     $retrieveOrder = "SELECT * FROM rentro_products ORDER BY created_at DESC";
@@ -104,7 +135,7 @@
               <hr> 
               <br>
                             <!--- MARKER OF CODE ------>
-                                            <!--- MARKER OF CODE ------>
+                            <!--- MARKER OF CODE ------>
       <script>
       
             var slideIndex = 1;
@@ -148,7 +179,7 @@
               $firstSlideCount++; 
       } //end of largest mysqli while
     } //end of largest mysqli if 
-
+echo "</div> "; 
 
  include 'footer.php'; 
 ?> 
