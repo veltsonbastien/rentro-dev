@@ -35,7 +35,7 @@
                                                                   To preserve our customer's best interests, items will be verified by Rentro before they are posted online for sale. </h4> 
            
            
-           <form class = 'register-div' method = 'POST' enctype='multipart/form-data' action = '".productSubmit($conn)."'> 
+           <form class = 'register-div' id = 'register-div' method = 'POST' enctype='multipart/form-data' action = '".productSubmit($conn)."'> 
              <ul class = 'register-div-ul'> 
                 <li class = 'signin-form-li'><p class = 'info-text'>Please make sure that the item name is as close to the original name of the item as possible. <br> </p></li>
                 <li class = 'register-div-li'><label class = 'signin-label'>Item Name:</label><input class = 'register-div-input' type = 'text' name = 'product-name'></li> 
@@ -47,9 +47,25 @@
                 <li class = 'register-div-li'><label class = 'signin-label'>Item Description:</label><textarea class = 'register-div-input register-div-textarea' type = 'text' name = 'product-desc' style ='resize:none; height:150px'></textarea></li>
                      <li class = 'signin-form-li'><p class = 'info-text'>Next, you will enter how long you plan to rent out this item for. Remember: <br> 
                                                          * Please do not rent out your item for longer than you know you will not need it. Take time to consider how long you want to rent out. <br> </p></li>
-                <li class = 'register-div-li'><label class = 'signin-label'>How long do you want to rent this item out for (in weeks) ?</label><input class = 'register-div-input register-div-input-ls' type = 'text' name = 'product-ls' maxlength='3' placeholder='###'></li>
-                     <li class = 'signin-form-li'><p class = 'info-text'> Next, you will enter a replacement price for your item. When doing this, please note: <br> 
+                <li class = 'register-div-li'><label class = 'signin-label'>How long do you want to rent this item out for (in weeks) ?</label>  
+                    <select form='register-div' class = 'register-div-input-select' name = 'product-ls' >
+                      <option value = '2'>2 weeks</option> 
+                      <option value = '3'>3 weeks</option> 
+                      <option value = '4' selected = 'selected' >1 month</option> 
+                      <option value = '12'>3 months</option>
+                      <option value = '24'>6 months</option> 
+                      <option value = '52'>1 year</option> 
+                    </select> 
+                </li>
+                <li class = 'signin-form-li'><p class = 'info-text'>Now, you will enter a WEEKLY rate for your item. Please consider: <br> 
                                                          * This price is calcuated by you. Based on the pictures you send, and the original market price of the item, Rentro staff will check your price's fairness, not its exactness. <br> 
+                                                         * You will get paid the total amount up front, but will also be fully expected to rent out your device for the time that you set. <br> 
+                                                         * If you are confused on anything, or simply want more information, please be sure to refer to the Terms of Use, specifically the section on the Replacement Price verifying process, or you can contact Customer Services. <br> </p>
+                                                          <label class = 'signin-label'>How much are you renting for per week?</label>
+                                                          <input class = 'register-div-input register-div-input-rp' type = 'text' name = 'product-wp' maxlength='6' placeholder='$'>                                                 
+                </li>
+                <li class = 'signin-form-li'><p class = 'info-text'> Next, you will enter a replacement price for your item. When doing this, please note: <br> 
+                                                         * This price is also calcuated by you. Based on the pictures you send, and the original market price of the item, Rentro staff will check your price's fairness, not its exactness. <br> 
                                                          * Please be sure to include the total prices of all included accessories in your replacement price.<br> 
                                                          * If you are confused on anything, or simply want more information, please be sure to refer to the Terms of Use, specifically the section on the Replacement Price verifying process, or you can contact Customer Services. <br> </p></li>
                 <li class = 'register-div-li'><label class = 'signin-label'>Replacement Price for this item: </label><input class = 'register-div-input register-div-input-rp' type = 'text' name = 'product-rp' maxlength='6' placeholder='$'></li>  

@@ -5,7 +5,7 @@ CREATE TABLE rentro_accounts(
     accountFN varchar(255) NOT NULL,
     accountLN varchar(255) NOT NULL,
     accountEM varchar(255) NOT NULL, 
-    accountPN varchar(255) NOT NULL, 
+    accountPNB varchar(255) NOT NULL, 
     accountPW varchar(128) NOT NULL, 
     accountPN varchar(128) NOT NULL
 ); 
@@ -16,6 +16,7 @@ CREATE TABLE rentro_products_review(
    productName varchar(255) NOT NULL, 
    productDesc text(8000) NOT NULL, 
    productRP int(255) NOT NULL, 
+   productWP int(255) NOT NULL, 
    productLS int(255) NOT NULL, 
    productTN varchar(255),
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -27,6 +28,7 @@ CREATE TABLE rentro_products_saved(
    productName varchar(255) NOT NULL, 
    productDesc text(8000) NOT NULL, 
    productRP int(255) NOT NULL, 
+   productWP int(255) NOT NULL, 
    productLS int(255) NOT NULL, 
    productTN varchar(255),  
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -39,6 +41,7 @@ CREATE TABLE rentro_products(
    productName varchar(255) NOT NULL, 
    productDesc text(8000) NOT NULL, 
    productRP int(255) NOT NULL, 
+   productWP int(255) NOT NULL, 
    productLS int(255) NOT NULL, 
    productTN varchar(255),
    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 

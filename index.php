@@ -2,12 +2,6 @@
   session_start(); 
  include 'header.php'; 
  
- function calculateWeekly($rp, $ls){
-  $rpp = 1; 
-  $rpp = (((2.5)*$ls)+(($rp)*(0.005)))-((0.05)*$ls); 
-  return $rpp; 
- }
-
 
  echo "
         <style> 
@@ -19,16 +13,20 @@
           }
           .containers{
             width: auto; 
+            margin-right: 10px; 
            }
            .confirm-item{
              margin-left: 10px; 
              transform: translateX(0); 
              transition: box-shadow 0.7s; 
              transition: transform 0.7s; 
+             transition: margin-top 0.7s; 
             }
             .confirm-item:hover{
               box-shadow: 0.1px 0.1px 5px #0283bf; 
               transform: scale(1.01); 
+              margin-top: 39px; 
+              cursor: pointer; 
              }
 
             .weeklyPrice{
@@ -37,6 +35,10 @@
               right: 0; 
               margin-left: 25px; 
               margin-bottom: 15px; 
+            }
+
+            .displayItem{
+            display: block; 
             }
         </style> 
 
@@ -60,7 +62,7 @@
                 <span class='checkmark'></span>
                 </label>
          </div>
-         <div class = 'confirm-item-major' style = 'display: inline-flex' > 
+         <div class = 'confirm-item-major' style = 'display: flex' > 
          "; 
 
     $retrieveOrder = "SELECT * FROM rentro_products ORDER BY created_at DESC";
@@ -75,7 +77,7 @@
           $pD = $rowOrder['productDesc'];
           $pL = $rowOrder['productLS']; 
           $pR = $rowOrder['productRP']; 
-          $wP = calculateWeekly($pR,$pL); 
+          $wP = $rowOrder['productWP']; 
           $imageCount = 1; 
           //the sql query to get every image from the current order 
           $confirmIMG = "SELECT * FROM rentro_products_images WHERE productID = '$useCurrentPID'"; 
@@ -84,7 +86,7 @@
           echo " 
             <div class = 'confirm-item'> 
             <h2 class = 'confirm-item-li confirm-item-name'>$pN</h2> 
-             <div class = 'weeklyPrice'>$$wP a week</div> 
+             <div class = 'weeklyPrice'>$$wP</div> 
               <ul class = 'confirm-item-ul'> 
                 <div class = 'containers'>
                     <!--- MARKER OF CODE ------>
@@ -123,7 +125,7 @@
                     <label class = 'confirm-item-label'>Product Description:</label> 
                     <li class = 'confirm-item-li' style = 'padding-right:30px;'>$pD</li> 
                     <label class = 'confirm-item-label'>Renting Out For:</label> 
-                    <li class = 'confirm-item-li' id='pL'>$pL weeks</li> 
+                    <li class = 'confirm-item-li' id='pL'>$pL</li> 
                     <label class = 'confirm-item-label'>Replacement Price:</label> 
                     <li class = 'confirm-item-li' id='pL'>$$pR</li> 
                     <button class = 'rent-out-button' name = 'purchase' id='postButton' style = 'margin-top:75px; margin-bottom:25px;'> Rent Out </button> 
@@ -166,8 +168,8 @@
             }
 
             $(document).ready(function(){
-                $('#continueButton').click(function(){
-                    window.location.replace('index.php'); 
+                $('.confirm-item').click(function(){
+                    $('.product-text').toggleClass('displayItem'); 
                 }); 
             });
             

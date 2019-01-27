@@ -502,6 +502,14 @@ a:hover{
     transform: translateX(-50%); 
 }
 
+.register-div-input-select
+{ 
+    width: 30%;
+    text-align: center;
+    margin-left: 50%;
+    transform: translateX(-50%);  
+}
+
 .sell-upper-texts{
     display: inline-flex;
     margin-left: 50%;
