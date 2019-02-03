@@ -9,15 +9,57 @@ include 'header.php';
 
 <div class = 'container-fluid'>
   <h3 class = 'showme-text' style = 'text-align: CENTER; margin-bottom: 30px; margin-top: 50px;'>Please Sign In</h3> 
-  
   <?php 
-  echo "
-  <form class = 'signin-form' name = 'signin-form' method = 'POST' action = '".loginUser($conn)."' >
+  echo " 
+  <script>
+    function do_login()
+    {
+    var email=$('#email').val();
+    var pass=$('#pwd').val();
+    var pin=$('#pin').val(); 
+
+    if(email!='' && pass!='' && pin!='')
+    {
+      $.ajax
+      ({
+      type:'post',
+      url:'signin.inc.php',
+      data:{
+      do_login:'do_login',
+      email:email,
+      pwd:pass,
+      pin:pin
+      },
+      success:function(response) {
+      if(response=='success')
+      {
+        window.location.href='index.php';
+      }
+      else
+      {
+        alert('Wrong Details');
+        window.location.href='signin.php?authentication=false';
+      }
+      }
+      });
+    }
+
+    else
+    {
+      alert('Please Fill All The Details');
+    }
+
+    return false;
+    }
+  </script> 
+
+
+  <form  name = 'signin-form' method = 'POST' class ='signin-form' id = 'signin-form' action='".loginUser($conn)."' onsubmit = 'return do_login();' >
     <ul class = 'signin-form-ul'> 
-     <li class = 'signin-form-li'><label class = 'signin-label'>Email:</label> <input class = 'signin-input' type = 'email' name = 'email'  placeholder = 'Please enter your email'> </li> 
-     <li class = 'signin-form-li'><label class = 'signin-label'>Password:</label><input class = 'signin-input' type = 'password' name = 'pwd' placeholder = 'Please enter your password'> </li>
-     <li class = 'signin-form-li'><label class = 'signin-label signin-label-pin'>Pin:</label><input class = 'signin-input signin-input-pin' type = 'password' name = 'pin' placeholder = '####' maxlength='4'> </li> 
-     <li class = 'signin-form-li'><input class = 'SI-bottom-button' type = 'submit' name = 'signIn' value = 'Sign In'> </li> 
+     <li class = 'signin-form-li'><label class = 'signin-label'>Email:</label> <input class = 'signin-input' type = 'email' name = 'email' id = 'email'  placeholder = 'Please enter your email'> </li> 
+     <li class = 'signin-form-li'><label class = 'signin-label'>Password:</label><input class = 'signin-input' type = 'password' name = 'pwd' id = 'pwd' placeholder = 'Please enter your password'> </li>
+     <li class = 'signin-form-li'><label class = 'signin-label signin-label-pin'>Pin:</label><input class = 'signin-input signin-input-pin' id = 'pin' type = 'password' name = 'pin' placeholder = '####' maxlength='4'> </li> 
+     <li class = 'signin-form-li'><input class = 'SI-bottom-button' id = 'signin-button-onpage' type = 'submit' name = 'signIn' value = 'Sign In' > </li> 
     </ul> 
   </form> 
    "; 
@@ -32,5 +74,4 @@ include 'header.php';
 
 <?php
 include 'footer.php';
-?> 
-
+?>
