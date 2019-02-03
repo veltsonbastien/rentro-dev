@@ -50,7 +50,7 @@
     <!--INTERNAL SCRIPTS -->
      <script>
         $(document).ready(function(){
-            $('.loader-div').fadeOut(1500);
+            $('.loader-div').fadeOut(500);
             $('.open-acct-modal').click(function(){
                $('.acct-small-modal').slideToggle('1000', 'swing'); 
             }); //open modal  

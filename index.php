@@ -30,6 +30,7 @@
                 <span class='checkmark'></span>
                 </label>
          </div>
+	</div>
          "; 
 
     $retrieveOrder = "SELECT * FROM rentro_products ORDER BY created_at DESC";
