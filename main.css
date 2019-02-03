@@ -31,7 +31,11 @@ body{
     margin-right: auto; 
     position: absolute;
     top: 30%;
-    left: 50%;
+	/** in the header.php, the loading symbol is 120 pixels wide. that's what the 60px is from.***/
+	left: -o-calc(50% - 60px);
+	left: -moz-calc(50% - 60px);
+	left: -webkit-calc(50% - 60px);
+	left: calc(50% - 60px);
     transform: translate(-50%, -50%);
 }
 
