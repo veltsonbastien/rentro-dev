@@ -61,6 +61,7 @@
                 <span class='checkmark'></span>
                 </label>
          </div>
+	</div>
          <div class = 'confirm-item-major' style = 'display: flex' > 
          "; 
 

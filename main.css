@@ -18,7 +18,7 @@ body{
 .loader-div{
     background: #dfe6e9;
     clear: both;
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
     z-index: 2; 
@@ -31,7 +31,11 @@ body{
     margin-right: auto; 
     position: absolute;
     top: 30%;
-    left: 50%;
+	/** in the header.php, the loading symbol is 120 pixels wide. that's what the 60px is from.***/
+	left: -o-calc(50% - 60px);
+	left: -moz-calc(50% - 60px);
+	left: -webkit-calc(50% - 60px);
+	left: calc(50% - 60px);
     transform: translate(-50%, -50%);
 }
 
@@ -47,7 +51,9 @@ body{
 }
 
 .navbar-nav{
+	display:flex;
     position: absolute; 
+	justify-content: flex-wrap;
     right: 10px; 
 }
 
@@ -90,7 +96,8 @@ li.navbar-under{
 .search-form{
     width: 70%; 
     padding-top: 10px;
-    transform: translateX(9%);
+	padding-right: 50px;
+    transform: translateX(0%);
 }
 
 .glyphicon-search{
@@ -107,6 +114,7 @@ a{
 
 a:visited, a:active, a:focus, a:hover{
     background: none !important; 
+	color: #b8c3d8;
 }
 
 .showme-div{
@@ -268,7 +276,7 @@ a:hover{
     box-shadow: none; 
     background: #fff;
     margin-left: 10px;
-    padding: 30px 20px;
+    padding: 50px 20px;
     border-radius: 5px;
     justify-content: center;
     transition: box-shadow 0.3s; 
@@ -303,7 +311,8 @@ a:hover{
       clear: both; 
       width: 100%; 
       background: #1a5379;
-      padding: 10px;
+      padding-top: 10px;
+	  padding-bottom: 10px;
       text-align: CENTER;
       color: grey;
       margin-top: 11%;

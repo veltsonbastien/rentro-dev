@@ -10,7 +10,7 @@
                   <a class = 'navFooter-li-secondary'>On Instagram: @rentro </a> 
                 </li> 
                 <li class = 'navFooter-li-primary'> Resources
-                  <a class = 'navFooter-li-secondary first-link'>Customer Services</a> 
+                  <a class = 'navFooter-li-secondary first-link' href='customer-service.php'>Customer Services</a> 
                   <a class = 'navFooter-li-secondary'>Terms of Use</a>
                 </li> 
             </ul> 
