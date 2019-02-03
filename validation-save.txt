@@ -1,0 +1,64 @@
+<!-- <script>
+  //form validator 
+  $(function(){
+    $("form[name='signin-form']").validate({
+      rules: {
+         firstname: "required", 
+         lastname:  "required", 
+         email: {
+           required: true, 
+           email: true 
+         }, //end of email
+         phonenumber: {
+            required: true, 
+            phoneUS: true //look at this in the future 
+         }, //end of phone 
+         pwd: {
+            required: true, 
+            minlength: 6
+         }, //end of pwd
+         pwd-confirm: {
+            required: true, 
+            minlength: 6
+         }, //end of pwd confirm
+         pin: {
+            required: true, 
+            length: 4
+         }, //end of pin
+         pin-confirm: {
+            required: true, 
+            length: 4 
+         } //end of pin confirm 
+        }, //the end of something 
+        //some messages 
+        messages: {
+           firstname: "Please be sure to fill out all forms", 
+           lastname: "Please be sure to fill out all forms", 
+           pwd:{
+             required: "Please be sure to fill out the password field", 
+             minlength: "It is strongly recommended that passwords are at least 6 characters" 
+           }, //end of pwd messages 
+           email: "Please enter a valid email", 
+           phonenumber: {
+             required: "Please be sure to fill out all forms", 
+             phoneUS: "Please enter a valid phone number"
+           }, //end of phonenumber messages 
+           pwd-confirm: {
+             required: "Please be sure to confirm your password", 
+             minlength: "Please make sure that your password lengths match"
+           }, 
+           pin: {
+             required: "Please be sure to fill out the pin field", 
+             length: "Pins must be 4 characters long"
+           }, 
+           pin-confirm: {
+             required: "Please be sure to confirm your pin", 
+             length: "Please make sure that your pin lengths match"
+           }, 
+        }, //end of messages  
+         submitHandler: function(form){
+           form.submit(); 
+           }//actual end of submit 
+         };//end of submit 
+    }); //end of form validate function 
+ </script>  -->

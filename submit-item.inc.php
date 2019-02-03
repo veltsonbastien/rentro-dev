@@ -47,8 +47,9 @@ function productSubmit($conn){
         $product_Desc = mysqli_real_escape_string($conn, $_POST['product-desc']);
         $product_LS = mysqli_real_escape_string($conn, $_POST['product-ls']);
         $product_RP = mysqli_real_escape_string($conn, $_POST['product-rp']);
+        $product_WP = mysqli_real_escape_string($conn, $_POST['product-wp']); 
 
-     if(empty($product_Name) || empty($product_Desc) || empty($product_LS) || empty($product_RP)) {
+     if(empty($product_Name) || empty($product_Desc) || empty($product_LS) || empty($product_RP) || empty($product_WP)) {
             header("Location: sell.php?form=incomplete"); 
             exit(); 
       } //end of if empty 
@@ -65,8 +66,8 @@ function productSubmit($conn){
                       //      exit();               
                         }
                         else{
-                        $sql = "INSERT into rentro_products_review (accountID, productID, productName, productDesc, productLS, productRP) VALUES 
-                                                                    ('$userID','$product_ID','$product_Name','$product_Desc','$product_LS','$product_RP')";
+                        $sql = "INSERT into rentro_products_review (accountID, productID, productName, productDesc, productLS, productRP, productWP) VALUES 
+                                                                    ('$userID','$product_ID','$product_Name','$product_Desc','$product_LS','$product_RP','$product_WP')";
                             for ($i = 0; $i < $fileCount; $i++) {
                                         $fileName = $myFile['name'][$i];
                                         $tmpName  = $myFile["tmp_name"][$i]; 
