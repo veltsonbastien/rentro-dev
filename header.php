@@ -4,6 +4,7 @@
   include 'submit-item.inc.php';
 
   echo"
+  <html> 
   <head>
   <!--METAS-->
   <meta charset='UTF-8'>

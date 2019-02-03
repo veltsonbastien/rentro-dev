@@ -30,8 +30,10 @@ include 'header.php';
       pwd:pass,
       pin:pin
       },
+     contentType: 'application/json; charset=utf-8',
+     dataType: 'json',
       success:function(response) {
-      if(response=='success')
+      if(success=='success')
       {
         window.location.href='index.php';
       }
@@ -52,9 +54,9 @@ include 'header.php';
     return false;
     }
   </script> 
+  
 
-
-  <form  name = 'signin-form' method = 'POST' class ='signin-form' id = 'signin-form' action='".loginUser($conn)."' onsubmit = 'return do_login();' >
+  <form  name = 'signin-form' method = 'POST' class ='signin-form' id = 'signin-form' action='signin.inc.php' onsubmit = 'return do_login();' >
     <ul class = 'signin-form-ul'> 
      <li class = 'signin-form-li'><label class = 'signin-label'>Email:</label> <input class = 'signin-input' type = 'email' name = 'email' id = 'email'  placeholder = 'Please enter your email'> </li> 
      <li class = 'signin-form-li'><label class = 'signin-label'>Password:</label><input class = 'signin-input' type = 'password' name = 'pwd' id = 'pwd' placeholder = 'Please enter your password'> </li>

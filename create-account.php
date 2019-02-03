@@ -1,6 +1,7 @@
 <?php
  session_start(); 
  include 'header.php'; 
+ include 'signup.inc.php'; 
 ?>
 <div class = 'loader-div' style = 'display:block'>
     <div class = 'loader'> </div>

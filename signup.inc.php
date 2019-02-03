@@ -25,10 +25,20 @@
         
     for($i = 0; $i<strlen($x); $i++){
         if($i%4===0){
+          if($i>strlen($x)){
             $x = substr_replace($x, $yaa[$yi], $i, 0);
             $yi++; 
+          } else{
+             $x = substr_replace($x, $dm[1], $i, 0); 
+          }//endo f else
         } if($i%5===0){
-            $x = substr_replace($x, $dm[$di], $i, 0);
+           if($i>strlen($x)) {
+             $x = substr_replace($x, $dm[$di], $i, 0);
+           }
+           else {
+             $x = substr_replace($x, $dm[1], $i, 0); 
+           }
+            
             $di++; 
         }
     }
@@ -56,44 +66,44 @@
   
   if(empty($account_FN) || empty($account_LN) || empty($account_EM) || empty($account_PNB) || empty($account_PWD1) || empty($account_PWD2) ||
      empty($account_PIN1) || empty($account_PIN2)) {
-       header("Location: create-account.php?signup=incomplete");
+       echo "<script> window.location.href='create-account.php?signup=empty'</script>"; 
        exit(); 
      } //end of if empty 
      else{
        if(!preg_match("/^[a-zA-Z]*$/", $account_FN) || !preg_match("/^[a-zA-Z]*$/", $account_LN) ){
-           header("Location: create-account.php?signup=invalid-names"); 
+           echo "<script> window.location.href='create-account.php?signup=invalid-account-names'</script>";  
            exit(); 
        } //end of if first name and last name fit preg match 
        else{
           if(!filter_var($account_EM,FILTER_VALIDATE_EMAIL)){
-            header("Location: create-account.php?signup=invalid-email"); 
+            echo "<script> window.location.href='create-account.php?signup=invalid-email'</script>"; 
             exit(); 
           } //end of if validate email  
           else {
             if(strcmp($account_PWD1,$account_PWD2)!=0){
-             header("Location: create-account.php?signup=passwords-do-not-match"); 
+             echo "<script> window.location.href='create-account.php?signup=passwords-dont-match'</script>";  
              exit(); 
             } //end of if passwords aren't equal
             else{
              $account_PWD = $account_PWD2; 
              if(strcmp($account_PIN1,$account_PIN2)!=0){
-             header("Location: create-account.php?signup=pins-do-not-match"); 
+             echo "<script> window.location.href='create-account.php?signup=invalid-pin'</script>"; 
              exit(); 
              }//end of if for pins aren't equal
              else{
               $account_PIN = $account_PIN2; 
               if(strlen($account_PNB)<10 || strlen($account_PNB)>11){
-                header("Location: create-account.php?signup=invalid-phone-number"); 
+                echo "<script> window.location.href='create-account.php?signup=invalid-phonenumber'</script>";  
                 exit(); 
               }//end of if phone is the right amount of numbers 
               else{
                   if(strlen($account_PWD)<6){
-                   header("Location: create-account.php?signup=invalid-password"); 
+                   echo "<script> window.location.href='create-account.php?signup=invalid-password-length'</script>"; 
                    exit(); 
                   }//end of if for password length check 
                   else{
                     if(strlen($account_PIN)!=4){
-                      header("Location: create-account.php?signup=invalid-pin"); 
+                      echo "<script> window.location.href='create-account.php?signup=invalid-pin-length'</script>"; 
                       exit(); 
                     }//end of if for pin length check
                     else{
@@ -104,7 +114,15 @@
                       $sql = "INSERT INTO rentro_accounts (accountID, accountFN, accountLN, accountEM, accountPNB, accountPW, accountPN) 
                               VALUES ('$hsacc','$account_FN', '$account_LN','$account_EM','$account_PNB','$hspwd','$hspin')";
                       mysqli_query($conn,$sql); 
-                      header("Location: create-account.php?singup-success");  
+                     echo "<script> 
+                     <div class='alert alert-primary alert-dismissible fade show' role='alert'>
+                        <strong>Account Creation Successful!</strong> Redirecting to sign in...
+                        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                          <span aria-hidden='true'>&times;</span>
+                        </button>
+                      </div>
+                            window.location.href='signin.php?signup=success'
+                           </script>";   
                     } //THE ELSE WHERE THE ACCOUNT IS ACTUALLY CREATED 
                   }//end of else for pin length check 
               } //end of else for password length check 
