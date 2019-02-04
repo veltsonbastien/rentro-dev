@@ -12,6 +12,7 @@ body{
     padding: 0em; 
     line-height: 20px; 
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    overflow-x: hidden; 
 }
 
 
@@ -574,6 +575,7 @@ a:hover{
     transform: translateX(-50%);
     background: white; 
     border-radius: 10px; 
+    flex: 1 0 32%;
 }
 
 .confirm-item-ul{
@@ -586,6 +588,7 @@ a:hover{
   padding-bottom: 10px; 
   margin-left: 30px; 
   display: inline-flex;
+  width: 92%; 
 }
 
 .confirm-item-li{
@@ -620,9 +623,7 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .containers {
   position: relative;
-  width: 50%;
-  margin-left: -20px;
-  margin-right: 30px;
+  width: 100%; 
 }
 
 /* Hide the images by default */

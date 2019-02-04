@@ -1,6 +1,6 @@
 <?php 
-//function loginUser($conn){
-  if(isset($_POST['do_login'])){
+function loginUser($conn){
+  if(isset($_POST['signIn'])){
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $pwd = mysqli_real_escape_string($conn, $_POST['pwd']); 
     $pin = mysqli_real_escape_string($conn, $_POST['pin']);
@@ -20,16 +20,16 @@
            $_SESSION['acct-em'] = $row['accountEM']; 
            $_SESSION['acct-pw'] = $row['accountPW']; 
            $_SESSION['acct-pn'] = $row['accountPN'];
-           echo "success"; 
+           echo "<script> window.location.href='index.php?authentication=true'</script>"; 
         }//end of checking if the password and pin are correct 
       } //end of while 
     } //end of checking result 
      else{
-       header("Location: index.php?authentication=false"); 
+       echo "<script> window.location.href='signin.php?authentication=false'</script>"; 
        exit(); 
      }//end of else there is no result
   } //end of isset
-//}//end 
+}//end 
 
 function logoutUser(){
    if(isset($_POST['logout-button'])){

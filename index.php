@@ -11,7 +11,7 @@
            width: 35%; 
           }
           .containers{
-            width: auto; 
+            width: 100%; 
             margin-right: 10px; 
            }
            .confirm-item{
@@ -52,17 +52,17 @@
                 <input type='checkbox' checked='checked'>
                 <span class='checkmark'></span>
                 </label>
-                <label class='container-label'>Duration
+                <label class='container-label'>Closest To Me
                 <input type='checkbox'>
                 <span class='checkmark'></span>
                 </label>
-                <label class='container-label'>Detailed
+                <label class='container-label'> Duration
                 <input type='checkbox'>
                 <span class='checkmark'></span>
                 </label>
          </div>
 	</div>
-         <div class = 'confirm-item-major' style = 'display: flex' > 
+         <div class = 'confirm-item-major' style = 'display: flex; flex-wrap: wrap; padding: 0px 20px;' > 
          "; 
 
     $retrieveOrder = "SELECT * FROM rentro_products ORDER BY created_at DESC";
@@ -95,8 +95,8 @@
                             while($rowImg = mysqli_fetch_assoc($confirmResultIMG)){   
                                 $iS = $rowImg['imageSrc']; 
                                 echo "
-                                  <div class='mySlides$firstSlideCount'>
-                                    <img src = 'rentro_product_images/$iS'/ style='width:300px, height:300px;'> 
+                                  <div class='mySlides$firstSlideCount' style='100%;'>
+                                    <img src = 'rentro_product_images/$iS'/ style='width:100%, height:300px;'> 
                                   </div>
                                     ";                                
                             }
@@ -111,7 +111,7 @@
                                 $iSS = $rowImgs['imageSrc']; 
                                 echo"
                                 <div class = 'column'>
-                                    <img class = 'demo cursor' id = 'previewIMG'src = 'rentro_product_images/$iSS' onclick='currentSlide$firstSlideCount($imageCount)'/> 
+                                    <img class = 'demo cursor' id = 'previewIMG' style='width:100%, height:300px;' src = 'rentro_product_images/$iSS' onclick='currentSlide$firstSlideCount($imageCount)'/> 
                                                     <!--- MARKER OF CODE FOR PICTURES BEING CREATED IN NAV ------>
                                 </div>
                                 "; 
@@ -128,7 +128,7 @@
                     <li class = 'confirm-item-li' id='pL'>$pL</li> 
                     <label class = 'confirm-item-label'>Replacement Price:</label> 
                     <li class = 'confirm-item-li' id='pL'>$$pR</li> 
-                    <button class = 'rent-out-button' name = 'purchase' id='postButton' style = 'margin-top:75px; margin-bottom:25px;'> Rent Out </button> 
+                    <button class = 'rent-out-button' name = 'purchase' id='postButton' style = 'margin-top:60px; margin-bottom:25px; margin-left:40%'> Rent Out </button> 
                 </div>
               </ul> 
             </div>
@@ -166,12 +166,6 @@
             slides[slideIndex-1].style.display = 'block';
             dots[slideIndex-1].className += ' active';
             }
-
-            $(document).ready(function(){
-                $('.confirm-item').click(function(){
-                    $('.product-text').toggleClass('displayItem'); 
-                }); 
-            });
             
         </script> 
         <!---------------------------------------- ONE ITERATION DONE HERE ------------------------------------->

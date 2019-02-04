@@ -57,8 +57,18 @@
             $('.loader-div').fadeOut(500);
             $('.open-acct-modal').click(function(){
                $('.acct-small-modal').slideToggle('1000', 'swing'); 
-            }); //open modal   
-           }); 
+            }); //open modal  
+
+            $('.confirm-item').click(function(){
+               //when clicked, do all that 
+               $(this).css('flex','1 0 60%'); 
+               $(this).children('.confirm-item-ul').css('width', '50%');
+               $(this).children('.confirm-item-ul').children('.product-text').css('display', 'block'); 
+               $(this).children('.confirm-item-ul').children('.product-text').css('position', 'absolute'); 
+               $(this).children('.confirm-item-ul').children('.product-text').css('right', '-50px'); 
+            }); //end of confirm
+
+           }); //end of jquery
      </script>
  </head>
  </html>
