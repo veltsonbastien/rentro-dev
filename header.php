@@ -59,7 +59,8 @@
                $('.acct-small-modal').slideToggle('1000', 'swing'); 
             }); //open modal  
 
-            $('.confirm-item').click(function(){
+            $('.confirm-item').click(function(e){
+                e.stopPropogation(); 
                //when clicked, do all that 
                $(this).css('flex','1 0 60%'); 
                $(this).children('.confirm-item-ul').css('width', '50%');
