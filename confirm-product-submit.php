@@ -34,6 +34,7 @@ if(mysqli_num_rows($confirmResult)>0){
        $pD = $row['productDesc'];
        $pL = $row['productLS']; 
        $pR = $row['productRP']; 
+       $pW = $row['productWP']; 
        $imageCount = 1; 
 
        echo "
@@ -77,7 +78,7 @@ if(mysqli_num_rows($confirmResult)>0){
                 <label class = 'confirm-item-label'>Product Description:</label> 
                 <li class = 'confirm-item-li' style = 'padding-right:30px;'>$pD</li> 
                 <label class = 'confirm-item-label'>Renting Out For:</label> 
-                <li class = 'confirm-item-li' id='pL'>$pL weeks</li> 
+                <li class = 'confirm-item-li' id='pL'>$pL</li> 
                 <label class = 'confirm-item-label'>Replacement Price:</label> 
                 <li class = 'confirm-item-li' id='pL'>$$pR</li> 
             </div>

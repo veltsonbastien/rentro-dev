@@ -1,15 +1,13 @@
 <?php
  session_start(); 
  include 'header.php'; 
-?> 
-
- <div class = 'loader-div' style = 'display:block'>
+ include 'signup.inc.php'; 
+?>
+<div class = 'loader-div' style = 'display:block'>
     <div class = 'loader'> </div>
 </div>
-
 <div class = 'container-fluid'>
   <h3 class = 'showme-text' style = 'text-align: CENTER; margin-bottom: 30px; margin-top: 50px;'>Create an Account</h3> 
-  
 <?php
   echo "
   <form class = 'signin-form' name = 'signin-form' method = 'POST' action = '".createUser($conn)."' >
@@ -43,4 +41,3 @@
 
 <?php
 include 'footer.php';
-?>

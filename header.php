@@ -1,10 +1,10 @@
 <?php  
   include 'dbh.inc.php'; 
-  include 'signup.inc.php'; 
   include 'signin.inc.php'; 
   include 'submit-item.inc.php';
 
   echo"
+  <html> 
   <head>
   <!--METAS-->
   <meta charset='UTF-8'>
@@ -17,11 +17,15 @@
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <!-- Latest compiled JavaScript -->
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js'></script>
+  <script src='https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.min.js'></script> 
+
   <!--STYLESHEETS--> 
   <!-- Latest compiled and minified CSS -->
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-  <link rel = 'stylesheet' href = 'main.css'> 
+  <link rel = 'stylesheet' href = 'main.css'>
+   
 
   <!--INTERNAL STYLES -->
               <style>
@@ -53,8 +57,8 @@
             $('.loader-div').fadeOut(500);
             $('.open-acct-modal').click(function(){
                $('.acct-small-modal').slideToggle('1000', 'swing'); 
-            }); //open modal  
-        }); 
+            }); //open modal   
+           }); 
      </script>
  </head>
  </html>
@@ -89,9 +93,7 @@
                <li class = 'acct-small-modal-li'> <a class = 'acct-small-modal-a'> Your Orders </a>  </li>
                <li class = 'acct-small-modal-li'> <a class = 'acct-small-modal-a'> Your Items </a> </li> 
                <li class = 'acct-small-modal-li'> 
-                 <form method = 'POST' action = '".logoutUser()."'> 
-                  <button class = 'logout-button' name = 'logout-button' > Sign Out </button> 
-                 </form>  
+                  <button class = 'logout-button' name = 'logout-button' onclick = 'logoutUser()' > Sign Out </button> 
                </li> 
               </ul> 
             </div> 
