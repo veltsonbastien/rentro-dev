@@ -53,8 +53,10 @@ body{
 .navbar-nav{
 	display:flex;
     position: absolute; 
-	justify-content: flex-wrap;
-    right: 10px; 
+	justify-content: flex-start;
+    right: 10px;
+	top: 10px;
+	
 }
 
 .navbar-form{
@@ -91,13 +93,18 @@ li.navbar-under{
 
 .main-links{
     padding: 0px 30px; 
+	
 }
 
 .search-form{
-    width: 70%; 
+    width: 65%; 
+	
     padding-top: 10px;
-	padding-right: 50px;
-    transform: translateX(0%);
+	padding-left: 25px;
+	padding-right: 0px;
+	min-width: 360px;
+	justify-content: flex-wrap;
+    /*transform: translateX(0%);*/
 }
 
 .glyphicon-search{
@@ -267,6 +274,7 @@ a:hover{
   list-style-type: none;
   margin-top: 50px;
   display: inline-flex;
+  flex-wrap: wrap;
   padding-inline-start: 0em; 
   justify-content: center;
   text-align: CENTER;
@@ -276,6 +284,7 @@ a:hover{
     box-shadow: none; 
     background: #fff;
     margin-left: 10px;
+	margin-bottom: 10px;
     padding: 50px 20px;
     border-radius: 5px;
     justify-content: center;
@@ -285,6 +294,7 @@ a:hover{
     -moz-transition-timing-function: linear;
     -o-transition-timing-function: linear;
     -webkit-transition-timing-function: linear;
+	min-width: 310px;
 }
 
 .CS-li:hover{
@@ -315,7 +325,7 @@ a:hover{
 	  padding-bottom: 10px;
       text-align: CENTER;
       color: grey;
-      margin-top: 11%;
+      margin-top: 100px;
       bottom: 0;
       left: 0; 
 }
