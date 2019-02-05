@@ -97,11 +97,13 @@ li.navbar-under{
 }
 
 .search-form{
-    width: 65%; 
+    width: 100%; 
 	
     padding-top: 10px;
-	padding-left: 25px;
-	padding-right: 0px;
+	width: -o-calc(60%-320px);
+	width: -moz-calc(60%-320px);
+	width: -webkit-calc(60%-320px);
+	width: calc(60%-320px);
 	min-width: 360px;
 	justify-content: flex-wrap;
     /*transform: translateX(0%);*/
@@ -109,6 +111,27 @@ li.navbar-under{
 
 .glyphicon-search{
     right: 20%; 
+}
+
+
+/* scrollbar stuff */
+.horiz-progress{
+	position: sticky;
+	top:0;
+	width: 100%;
+	height: 12px;
+	/*background-color:#000000;*/
+	z-index: 2;
+}
+
+.horiz-progress-fg{
+	position: absolute;
+	width: 0%;
+	height: 100%;
+	background-color:#1a5379;
+	z-index: 2;
+	-webkit-transition: width 0.2s ease-out;
+	transition: width 0.2s ease-out;
 }
 
 a{
@@ -174,7 +197,6 @@ input[type=checkbox], input[type=radio] {
     list-style-type: none;  
     margin-top: 35px; 
     padding-inline-start: 0px;
-    
 }
 
 .SI-inline-link{
@@ -210,6 +232,8 @@ input[type=checkbox], input[type=radio] {
 
 .SI-info-boxes-p{
     margin-left: 10px; 
+	justify-content: flex-wrap;
+	min-width: 200px;
 }
 
 .fa-user-plus, .fa-shipping-fast, .fa-clock,
