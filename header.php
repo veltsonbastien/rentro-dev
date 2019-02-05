@@ -56,17 +56,16 @@
             $('.loader-div').fadeOut(500);
             $('.open-acct-modal').click(function(){
                $('.acct-small-modal').slideToggle('1000', 'swing'); 
-            }); //open modal  
-
-            $('.confirm-item').click(function(){
+        }); //open modal  
+            $('#confirm-item-index').click(function(){
                //when clicked, do all that 
                $(this).css('flex','1 0 60%'); 
                $(this).children('.confirm-item-ul').css('width', '50%');
+               $(this).children('#close-product').css('display', 'block');
                $(this).children('.confirm-item-ul').children('.product-text').css('display', 'block'); 
                $(this).children('.confirm-item-ul').children('.product-text').css('position', 'absolute'); 
                $(this).children('.confirm-item-ul').children('.product-text').css('right', '-50px'); 
             }); //end of confirm
-
            }); //end of jquery
      </script>
 	 <script>
@@ -109,7 +108,9 @@
                <li class = 'acct-small-modal-li'> <a class = 'acct-small-modal-a'> Your Orders </a>  </li>
                <li class = 'acct-small-modal-li'> <a class = 'acct-small-modal-a'> Your Items </a> </li> 
                <li class = 'acct-small-modal-li'> 
-                  <button class = 'logout-button' name = 'logout-button' onclick = 'logoutUser()' > Sign Out </button> 
+                <form action = '".logoutUser()."'> 
+                  <button class = 'logout-button' name = 'logout-button'> Sign Out </button> 
+                </form> 
                </li> 
               </ul> 
             </div> 

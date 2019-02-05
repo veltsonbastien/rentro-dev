@@ -120,7 +120,7 @@ li.navbar-under{
 	position: sticky;
 	top:0;
 	width: 100%;
-	height: 12px;
+	height: 6px;
 	/*background-color:#000000;*/
 	z-index: 2;
 }
@@ -129,7 +129,7 @@ li.navbar-under{
 	position: absolute;
 	width: 0%;
 	height: 100%;
-	background-color:#1a5379;
+	background-color:#3b7aa5;
 	z-index: 2;
 	-webkit-transition: width 0.2s ease-out;
 	transition: width 0.2s ease-out;
@@ -146,6 +146,8 @@ a{
 a:visited, a:active, a:focus, a:hover{
     background: none !important; 
 	color: #b8c3d8;
+    outline: none; 
+    text-decoration: none; 
 }
 
 .showme-div{
@@ -471,6 +473,7 @@ a:hover{
     border: 1px solid grey;
     border-radius: 5px; 
     display: none; 
+    z-index: 4; 
 }
 
 
@@ -761,6 +764,11 @@ img {
     color: white;
     font-size: 19px;
     margin-bottom: 50px;
+    transition: zoom 0.5s; 
+}
+
+.rent-out-button:hover{
+  zoom: 102.5%; 
 }
 
 .weeklyPrice{
@@ -783,4 +791,42 @@ img {
     padding: 5px 10px;
     font-size: 18px;
     display: none;
+    outline: none; 
+    transition: border 0.7s;
+    transition: scale 0.7s;  
+}
+
+#close-product:hover{
+    border-style: outset; 
+    transform: scale(1.05); 
+}
+
+/******************************************/ 
+
+.information-form-header{
+     margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.information-form{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.information-form-div{
+ margin-bottom: 10px; 
+}
+
+#input-labels{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.names-input{
+ width: 95%; 
+}
+
+#information-form-names{
+   display: inline-block; 
+   width: 49%;
 }

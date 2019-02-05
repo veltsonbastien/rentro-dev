@@ -1,92 +1,55 @@
  <?php
   session_start(); 
- include 'header.php'; 
+  include 'header.php'; 
 
- echo "
-        <style> 
-         .product-text{
-           display: none; 
-          }
-          .confirm-item{
-           width: 35%; 
-          }
-          .containers{
-            width: 100%; 
-            margin-right: 10px; 
-           }
-           .confirm-item{
-             margin-left: 10px; 
-             transform: translateX(0); 
-             transition: box-shadow 0.7s; 
-             transition: transform 0.7s; 
-             transition: margin-top 0.7s; 
-            }
-            .confirm-item:hover{
-              box-shadow: 0.1px 0.1px 5px #0283bf; 
-              transform: scale(1.01); 
-              margin-top: 39px; 
-              cursor: pointer; 
-             }
+if(isset($_SESSION['acct-id'])){
+echo "
 
-            .weeklyPrice{
-              position: unset; 
-              top: 0; 
-              right: 0; 
-              margin-left: 25px; 
-              margin-bottom: 15px; 
-            }
+<style>
+ .containers{
+   width: 80%;    
+  }
 
-            .displayItem{
-            display: block; 
-            }
-        </style> 
+ .product-text{
+       margin-left: 50px;
+   }
+
+
+</style> 
 
         <div class = 'loader-div' style = 'display:block'>
           <div class = 'loader'> </div>
         </div>
-        <div class = 'container-fluid'> 
-           <h1 class = 'display-1'> Newest Deals </h1>
-           <div class = 'showme-div'>   
-           <h3 class = 'showme-text'> Show me items: </h3>
-                <label class='container-label'>Lowest Price
-                <input type='checkbox' checked='checked'>
-                <span class='checkmark'></span>
-                </label>
-                <label class='container-label'>Closest To Me
-                <input type='checkbox'>
-                <span class='checkmark'></span>
-                </label>
-                <label class='container-label'> Duration
-                <input type='checkbox'>
-                <span class='checkmark'></span>
-                </label>
-         </div>
-	</div>
-         <div class = 'confirm-item-major' style = 'display: flex; flex-wrap: wrap; padding: 0px 20px;' > 
-         "; 
 
-    $retrieveOrder = "SELECT * FROM rentro_products ORDER BY created_at DESC";
-    $getOrder = $conn->query($retrieveOrder);
-    $firstSlideCount = 1; 
-    if(mysqli_num_rows($getOrder)>0){
-      while($rowOrder = mysqli_fetch_assoc($getOrder)){
-          //get the pid of the current order 
-          $useCurrentPID = $rowOrder['productID']; 
+        <div class = 'container-fluid'>
+             <h1 class = 'display-1' style = 'text-align: CENTER;'>Your Order</h1>
+             <h3 class = 'showme-text' style = 'text-align: CENTER; color: #555'>Let's add the finishing touches</h3>
+        </div> 
+";
+
+//if the user is signed in 
+$currentProductId = $_POST['currentProductID']; 
+$loadProductSQL = "SELECT * FROM rentro_products WHERE productID = '$currentProductId'"; 
+$loadProduct = $conn->query($loadProductSQL);
+$firstSlideCount = 1;
+if(mysqli_num_rows($loadProduct)>0){
+   while($row = mysqli_fetch_assoc($loadProduct)){
+               //get the pid of the current order 
+          $useCurrentPID = $row['productID']; 
           //get everything from the current product 
-          $pN = $rowOrder['productName'];
-          $pD = $rowOrder['productDesc'];
-          $pL = $rowOrder['productLS']; 
-          $pR = $rowOrder['productRP']; 
-          $wP = $rowOrder['productWP']; 
+          $pN = $row['productName'];
+          $pD = $row['productDesc'];
+          $pL = $row['productLS']; 
+          $pR = $row['productRP']; 
+          $wP = $row['productWP']; 
           $imageCount = 1; 
           //the sql query to get every image from the current order 
           $confirmIMG = "SELECT * FROM rentro_products_images WHERE productID = '$useCurrentPID'"; 
           $confirmResultIMG = $conn->query($confirmIMG); 
           //this echo is being done for each of the the times a product is being taken 
           echo " 
-            <div class = 'confirm-item' id = 'confirm-item-index' > 
+            <div class = 'confirm-item'> 
             <h2 class = 'confirm-item-li confirm-item-name'>$pN</h2> 
-             <button aria-label='Close' id = 'close-product'>X</button>
              <div class = 'weeklyPrice'>$$wP</div> 
               <ul class = 'confirm-item-ul'> 
                 <div class = 'containers'>
@@ -129,10 +92,8 @@
                     <li class = 'confirm-item-li' id='pL'>$pL</li> 
                     <label class = 'confirm-item-label'>Replacement Price:</label> 
                     <li class = 'confirm-item-li' id='pL'>$$pR</li> 
-                    <form action='rentout.php' method = 'POST' > 
-                      <button class = 'rent-out-button' name = 'purchase' id='postButton' style = 'margin-top:60px; margin-bottom:25px; margin-left:40%'  '> Rent Out </button> 
+                      <button class = 'rent-out-button' name = 'purchase' id='slidePageDownButton' style = 'margin-top:60px; margin-bottom:25px; margin-left:40%' '>Next Step</button> 
                       <input type = 'hidden' name = 'currentProductID' value = $useCurrentPID >
-                    </form> 
                 </div>
               </ul> 
             </div>
@@ -177,10 +138,31 @@
           "; 
                 //end of major form
               $firstSlideCount++; 
-      } //end of largest mysqli while
-    } //end of largest mysqli if 
-echo "</div> "; 
+   }
+}//end of if 
 
- include 'footer.php'; 
-?> 
+echo "
+  <div class = 'information-form-header'> 
+   <form class = 'information-form'> 
+      <div class = 'information-form-div' id = 'information-form-names' ><label id = 'input-labels' >First Name:</label> <br> <input type = 'text' name = 'firstName' class = 'names-input'> </input> </div> 
+      <div class = 'information-form-div' id = 'information-form-names' ><label id = 'input-labels' >Last Name:</label> <br> <input type = 'text' name = 'lastName' class = 'names-input'> </input> </div>
+      <div class = 'information-form-div'><label id = 'input-labels' >Phone Number:</label> <br> <input type = 'text' name = 'phoneNumber'> </input>  </div>
+      <div class = 'information-form-div'><label id = 'input-labels' >Email Address:</label> <br> <input type = 'text' name = 'emailAddress'> </input> </div>
+      <div class = 'information-form-div'><label id = 'input-labels' >Address: </label> <br> <input type = 'text' name = 'actualAddress'> </div>
+   </form> 
+  </div> 
+  <!--UNDER THIS FORM WE WILL HANDLE PAYMENTS --> 
+    <div class = 'payment-form-header'> 
+    <form class = 'payment-form'> 
+        <div class = 'payment-form-div'><label id = 'input-labels'>Name on Card:</label> <br> <input type = 'text'> </input> </div> 
+        <div class = 'payment-form-div'><label id = 'input-labels'>Card Number:</label> <br> <input type = 'password'> </input> </div>
+        <div class = 'payment-form-div'><label id = 'input-labels'>Expiration Date:</label> <br> <input type = 'text' maxlength = 7 > </input>  </div>
+        <div class = 'payment-form-div'><label id = 'input-labels'>Card Verification Number (CVN):</label> <br> <input type = 'password'> </input>  </div>
+    </form> 
+    </div>  
+"; 
 
+}//end of isset 
+else{
+       echo "<script> window.location.href='signin.php?authentication=false'</script>"; 
+}
