@@ -2,8 +2,8 @@
   include 'dbh.inc.php'; 
   include 'signin.inc.php'; 
   include 'submit-item.inc.php';
-
   echo"
+  <!DOCTYPE HTML>
   <html> 
   <head>
   <!--METAS-->
@@ -25,7 +25,6 @@
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
   <link rel = 'stylesheet' href = 'main.css'>
-   
 
   <!--INTERNAL STYLES -->
               <style>
@@ -70,6 +69,13 @@
 
            }); //end of jquery
      </script>
+	 <script>
+		$(document).scroll(function(){
+			var a = $(document).scrollTop();
+			var b = $(document).height() - $(window).height();
+			$('.horiz-progress-fg').width((100.0*a/b)+'%');
+		}); 
+	 </script>
  </head>
  </html>
 
@@ -126,5 +132,9 @@ echo"
             <li class = 'main-links'><a class = 'lower-main-links' href='buyer-information.php'>I'm a Buyer</a></li>
             <li class = 'main-links'><a class = 'lower-main-links' href='customer-service.php'>Customer Services</a></li>
             </ul>
-        </nav>   
+        </nav>  
+
+		<div class='horiz-progress'>
+			<div class='horiz-progress-fg'></div>
+		</div>
 "; 
