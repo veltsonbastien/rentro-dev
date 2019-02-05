@@ -86,6 +86,7 @@
           echo " 
             <div class = 'confirm-item'> 
             <h2 class = 'confirm-item-li confirm-item-name'>$pN</h2> 
+             <button aria-label='Close' id = 'close-product' >X</button>
              <div class = 'weeklyPrice'>$$wP</div> 
               <ul class = 'confirm-item-ul'> 
                 <div class = 'containers'>

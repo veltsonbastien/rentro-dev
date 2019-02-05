@@ -737,3 +737,16 @@ img {
     font-size: 30px;
     font-weight: bold;
 }
+
+#close-product{
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    background: none;
+    border-radius: 30px;
+    border: 2px solid #2280bf;
+    border-style: inset;
+    padding: 5px 10px;
+    font-size: 18px;
+    display: none;
+}
