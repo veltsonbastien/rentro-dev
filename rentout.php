@@ -144,11 +144,20 @@ if(mysqli_num_rows($loadProduct)>0){
 echo "
   <div class = 'information-form-header'> 
    <form class = 'information-form'> 
-      <div class = 'information-form-div' id = 'information-form-names' ><label id = 'input-labels' >First Name:</label> <br> <input type = 'text' name = 'firstName' class = 'names-input'> </input> </div> 
-      <div class = 'information-form-div' id = 'information-form-names' ><label id = 'input-labels' >Last Name:</label> <br> <input type = 'text' name = 'lastName' class = 'names-input'> </input> </div>
-      <div class = 'information-form-div'><label id = 'input-labels' >Phone Number:</label> <br> <input type = 'text' name = 'phoneNumber'> </input>  </div>
-      <div class = 'information-form-div'><label id = 'input-labels' >Email Address:</label> <br> <input type = 'text' name = 'emailAddress'> </input> </div>
-      <div class = 'information-form-div'><label id = 'input-labels' >Address: </label> <br> <input type = 'text' name = 'actualAddress'> </div>
+    <div class = 'rows'> 
+     <div class = 'column1'> 
+      <div class = 'information-form-div'> <label id = 'input-labels' >Name:</label> <br> <input type = 'text' name = 'userName' id = 'names-input' class = 'form-input'> </input> </div> 
+     </div> 
+     <div class = 'column2'>  
+      <div class = 'information-form-div-c2-p'> <label id = 'input-labels' >Phone Number:</label> <br> <input type = 'text' id = 'phone-input' class = 'form-input' name = 'phoneNumber'> </input>  </div>
+      <div class = 'information-form-div-c2-e'> <label id = 'input-labels' >Email Address:</label> <br> <input type = 'text' name = 'emailAddress' id = 'email-input' class = 'form-input'> </input> </div>
+     </div> 
+     <div class = 'column3' style = 'margin-top: 20px; '>     
+      <label id = 'input-labels'>Shipping Address:</label>   
+      <div class = 'information-form-div-c3-snumber'> <input type = 'text' id='street-number' class = 'form-input' name = 'streeNumber' placeholder ='Street Number'> </input>  </div> 
+      <div class = 'information-form-div-c3-sname'> <input type = 'text' id='street-number' class = 'form-input' name = 'streeNumber' placeholder ='Street Name'> </input>  </div> 
+     </div> 
+    </div> <!--END OF ROW -->
    </form> 
   </div> 
   <!--UNDER THIS FORM WE WILL HANDLE PAYMENTS --> 

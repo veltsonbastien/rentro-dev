@@ -803,18 +803,78 @@ img {
 
 /******************************************/ 
 
+.form-input{
+    height: 35px;
+    border: 1px solid #0098ff36;
+    border-radius: 3px;
+    font-size: 25px; 
+}
+
+.rows{
+ display: flex;
+ flex-wrap: wrap; 
+ width: 75%; 
+  margin-left: 50%; 
+ transform: translateX(-50%);  
+}
+
+.column1{
+    display: flex;
+    flex-wrap: wrap;
+    width: -webkit-fill-available;
+}
+
+.column2{
+display: flex;
+flex-wrap: wrap; 
+width: 100%;
+justify-content: space-between;
+}
+
+.column3{
+    display: flex;
+    flex-wrap: wrap;
+    width: -webkit-fill-available;
+}
+
 .information-form-header{
      margin-left: 50%;
     transform: translateX(-50%);
 }
 
 .information-form{
-    width: 100%;
-    border: 1px solid black;
+     width: 100%;
+     border: 1px solid black;
+     margin-left: 50%; 
+     transform: translateX(-50%);  
 }
 
 .information-form-div{
  margin-bottom: 10px; 
+ width: 100%; 
+}
+
+.information-form-div-c2-p{
+  width: 35%; 
+}
+
+.information-form-div-c2-e{
+  width: 55%; 
+}
+
+.information-form-div-c3-snumber{
+     width: 40%; 
+}
+
+.information-form-div-c3-sname{
+     width: 50%; 
+}
+
+
+#shipaddress-input{
+ width: 100%; 
+ height: 100px; 
+ resize: none;
 }
 
 #input-labels{
@@ -822,11 +882,15 @@ img {
     font-weight: 400;
 }
 
-.names-input{
- width: 95%; 
+#names-input{
+ width: 100%; 
 }
 
-#information-form-names{
-   display: inline-block; 
-   width: 49%;
+#email-input, #phone-input{
+ width: 100%; 
 }
+
+
+
+
+
