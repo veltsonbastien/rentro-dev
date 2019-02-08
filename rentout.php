@@ -152,10 +152,20 @@ echo "
       <div class = 'information-form-div-c2-p'> <label id = 'input-labels' >Phone Number:</label> <br> <input type = 'text' id = 'phone-input' class = 'form-input' name = 'phoneNumber'> </input>  </div>
       <div class = 'information-form-div-c2-e'> <label id = 'input-labels' >Email Address:</label> <br> <input type = 'text' name = 'emailAddress' id = 'email-input' class = 'form-input'> </input> </div>
      </div> 
-     <div class = 'column3' style = 'margin-top: 20px; '>     
-      <label id = 'input-labels'>Shipping Address:</label>   
-      <div class = 'information-form-div-c3-snumber'> <input type = 'text' id='street-number' class = 'form-input' name = 'streeNumber' placeholder ='Street Number'> </input>  </div> 
-      <div class = 'information-form-div-c3-sname'> <input type = 'text' id='street-number' class = 'form-input' name = 'streeNumber' placeholder ='Street Name'> </input>  </div> 
+      <label id = 'input-labels' style = 'margin-top: 20px; '>Shipping Address:</label>  
+     <div class = 'column205'>     
+        <div class = 'information-form-div-c205-pobox'> <input type = 'text' name = 'pobox'  id = 'pobox-input' class = 'form-input' placeholder = 'PO Box number (optional)' > </input>  </div>
+     </div> 
+     <div class = 'column3'>     
+       <div class = 'information-form-div-c3-address1'> <input type = 'text' name = 'address1'  id = 'address1-input' class = 'form-input' placeholder = 'Address Line 1' > </input>  </div>
+     </div> 
+     <div class = 'column305'>     
+      <div class = 'information-form-div-c305-address2'> <input type = 'text' name = 'address2'  id = 'address2-input' class = 'form-input' placeholder = 'Address Line 2 (optional) ' > </input>  </div>
+     </div> 
+     <div class = 'column4'>     
+       <div class = 'information-form-div-c4-city'>  <input type = 'text' name = 'city'  id = 'city-input'    class = 'form-input' placeholder = 'City' > </input>  </div>
+       <div class = 'information-form-div-c4-state'> <input type = 'text' name = 'state' id = 'state-input'   class = 'form-input' placeholder = 'State (2-Letter or Full Name) ' > </input>  </div>
+       <div class = 'information-form-div-c4-zip'>   <input type = 'text' name = 'zip'   id = 'zip-input'     class = 'form-input' placeholder = 'Zip Code' > </input>  </div>
      </div> 
     </div> <!--END OF ROW -->
    </form> 

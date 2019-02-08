@@ -831,10 +831,10 @@ width: 100%;
 justify-content: space-between;
 }
 
-.column3{
+.column3, .column305, .column205{
     display: flex;
-    flex-wrap: wrap;
     width: -webkit-fill-available;
+    justify-content: space-between; 
 }
 
 .information-form-header{
@@ -862,12 +862,30 @@ justify-content: space-between;
   width: 55%; 
 }
 
-.information-form-div-c3-snumber{
-     width: 40%; 
+.information-form-div-c3-address1, .information-form-div-c305-address2{
+     width: 100%; 
 }
 
-.information-form-div-c3-sname{
-     width: 50%; 
+.information-form-div-c205-pobox{
+    width: 20%; 
+}
+
+.column4{
+      display: flex;
+      width: -webkit-fill-available;
+      justify-content: space-between; 
+}
+
+.information-form-div-c4-city{
+    width: 40%; 
+}
+
+.information-form-div-c4-state{
+   width: 30%; 
+}
+
+.information-form-div-c4-zip{
+  width: 20%; 
 }
 
 
@@ -882,12 +900,16 @@ justify-content: space-between;
     font-weight: 400;
 }
 
-#names-input{
+#names-input, #email-input, #phone-input, #address1-input, #address2-input,
+#city-input, #state-input, #zip-input, #pobox-input{
  width: 100%; 
+ margin-top: 5px; 
 }
 
-#email-input, #phone-input{
- width: 100%; 
+::placeholder{
+    font-size: 10px; 
+    text-align: CENTER; 
+    vertical-align: middle;
 }
 
 
