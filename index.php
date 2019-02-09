@@ -2,8 +2,8 @@
   session_start(); 
  include 'header.php'; 
 
- echo "
-        <style> 
+ echo " 
+        <style>  //Hey family, its me
          .product-text{
            display: none; 
           }
