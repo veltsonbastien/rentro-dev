@@ -3,7 +3,7 @@
  include 'header.php'; 
 
  echo " 
-        <style>  //Hey family, its me
+        <style>  
          .product-text{
            display: none; 
           }

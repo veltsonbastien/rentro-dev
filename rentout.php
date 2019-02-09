@@ -101,6 +101,7 @@ if(mysqli_num_rows($loadProduct)>0){
               <br> 
               <hr> 
               <br>
+
                             <!--- MARKER OF CODE ------>
                             <!--- MARKER OF CODE ------>
       <script>
@@ -142,6 +143,7 @@ if(mysqli_num_rows($loadProduct)>0){
 }//end of if 
 
 echo "
+ <h3 class = 'showme-text' style = 'text-align: CENTER; color: #555; margin-top: 50px; margin-bottom: 20px; '>Verify your contact and shipping information: </h3>
   <div class = 'information-form-header'> 
    <form class = 'information-form'> 
     <div class = 'rows'> 
@@ -154,7 +156,7 @@ echo "
      </div> 
       <label id = 'input-labels' style = 'margin-top: 20px; '>Shipping Address:</label>  
      <div class = 'column205'>     
-        <div class = 'information-form-div-c205-pobox'> <input type = 'text' name = 'pobox'  id = 'pobox-input' class = 'form-input' placeholder = 'PO Box number (optional)' > </input>  </div>
+        <div class = 'information-form-div-c205-pobox'> <input type = 'text' name = 'pobox'  id = 'pobox-input' class = 'form-input' placeholder = 'PO Box number' > </input>  </div>
      </div> 
      <div class = 'column3'>     
        <div class = 'information-form-div-c3-address1'> <input type = 'text' name = 'address1'  id = 'address1-input' class = 'form-input' placeholder = 'Address Line 1' > </input>  </div>
@@ -164,7 +166,7 @@ echo "
      </div> 
      <div class = 'column4'>     
        <div class = 'information-form-div-c4-city'>  <input type = 'text' name = 'city'  id = 'city-input'    class = 'form-input' placeholder = 'City' > </input>  </div>
-       <div class = 'information-form-div-c4-state'> <input type = 'text' name = 'state' id = 'state-input'   class = 'form-input' placeholder = 'State (2-Letter or Full Name) ' > </input>  </div>
+       <div class = 'information-form-div-c4-state'> <input type = 'text' name = 'state' id = 'state-input'   class = 'form-input' placeholder = 'State' > </input>  </div>
        <div class = 'information-form-div-c4-zip'>   <input type = 'text' name = 'zip'   id = 'zip-input'     class = 'form-input' placeholder = 'Zip Code' > </input>  </div>
      </div> 
     </div> <!--END OF ROW -->

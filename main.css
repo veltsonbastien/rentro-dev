@@ -808,6 +808,8 @@ img {
     border: 1px solid #0098ff36;
     border-radius: 3px;
     font-size: 25px; 
+    transition: border 0.7s; 
+    transition: outline 0.7s; 
 }
 
 .rows{
@@ -844,7 +846,6 @@ justify-content: space-between;
 
 .information-form{
      width: 100%;
-     border: 1px solid black;
      margin-left: 50%; 
      transform: translateX(-50%);  
 }
@@ -859,7 +860,7 @@ justify-content: space-between;
 }
 
 .information-form-div-c2-e{
-  width: 55%; 
+  width: 60%; 
 }
 
 .information-form-div-c3-address1, .information-form-div-c305-address2{
@@ -907,9 +908,8 @@ justify-content: space-between;
 }
 
 ::placeholder{
-    font-size: 10px; 
-    text-align: CENTER; 
-    vertical-align: middle;
+    font-size: 15px; 
+    padding-left: 3px; 
 }
 
 
