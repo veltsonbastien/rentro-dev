@@ -1,5 +1,5 @@
 <?php  
-  include 'dbh.inc.php'; 
+  include 'dbh-public.inc.php'; 
   include 'signup.inc.php'; 
   include 'signin.inc.php'; 
  
