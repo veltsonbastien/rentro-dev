@@ -6,6 +6,7 @@
   <!DOCTYPE HTML>
   <html> 
   <head>
+  <title> Rentro | Make some, save some </title> 
   <!--METAS-->
   <meta charset='UTF-8'>
   <meta name='description' content='Make money, or save it. You can do both here!'>

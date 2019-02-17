@@ -6,6 +6,7 @@
   if(isset($_SESSION['email']) && isset($_SESSION['pwd']) && isset($_SESSION['pin'])){
   echo"
   <head>
+  <title> Rentro | Save some, make some </title> 
   <!--METAS-->
   <meta charset='UTF-8'>
   <meta name='description' content='Make money, or save it. You can do that both here.'>
