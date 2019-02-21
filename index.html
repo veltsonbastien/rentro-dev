@@ -22,8 +22,8 @@
               </div>
                 <div class = 'upper-navigation'>
                   <ul id = 'upper-nav-ul'> 
-                    <li class = 'upper-nav-li' data-aos="fade-left" data-aos-duration="500"> <a class = 'header-links'> I'm a Renter </a> </li>
-                    <li class = 'upper-nav-li' data-aos="fade-left" data-aos-duration="700"> <a class = 'header-links'> I'm a Lender </a> </li>
+                    <li class = 'upper-nav-li' data-aos="fade-left" data-aos-duration="500"> <a class = 'header-links'> Become a Lender  </a> </li>
+                    <li class = 'upper-nav-li' data-aos="fade-left" data-aos-duration="700"> <a class = 'header-links'> Why Rentro? </a> </li>
                     <li class = 'upper-nav-li rounded' data-aos="fade-left" data-aos-duration="900" > <a class = 'header-links'> Login </a> </li>
                     <li class = 'upper-nav-li rounded' data-aos="fade-left" data-aos-duration="1100" > <a class = 'header-links'> Sign Up </a> </li>
                   </ul>
@@ -63,16 +63,42 @@
                </div>
           </div> <!--END OF HEADER CONTAINER --> 
           <div class = 'main-body'>
-             <h1 class = 'display-1'> Newest Deals </h1>
-             <p class = 'display-p'> Showing you the latest deals from your area:</p>
-             <div id="address"></div>
+             <h1 class = 'display-1' data-aos="zoom-in-up" data-aos-duration="500"> Newest Items </h1>
+             <span class = 'location-text'>
+                <p class = 'display-p' data-aos="zoom-in-up" data-aos-duration="500"> Showing you the latest deals from your area:</p>
+               <div id="address" data-aos="zoom-in-left" data-aos-duration="500"></div>
+             </span>
+             <!--PROTOTYPE FOR THE ITEM BOXES --> 
+             <div class = 'main-product'>
+
+             </div>
+
           </div> <!--END OF MAIN BODY --> 
+           <div class = 'footer navFooter'>
+            <ul class = 'navFooter-ul'> 
+               <li class = 'navFooter-li-primary'> Why Rentro?
+                  <a class = 'navFooter-li-secondary first-link'>About Us</a> 
+                </li> 
+               <li class = 'navFooter-li-primary'> Connect With Us
+                  <a class = 'navFooter-li-secondary first-link'>On Twitter: @rentro </a> 
+                  <a class = 'navFooter-li-secondary'>On Instagram: @rentro </a> 
+                </li> 
+                <li class = 'navFooter-li-primary'> Resources
+                  <a class = 'navFooter-li-secondary first-link' href='customer-service.php'>Customer Services</a> 
+                  <a class = 'navFooter-li-secondary'>Terms of Use</a>
+                </li> 
+            </ul> 
+            <hr style = 'color: grey;'> 
+              <a class='bottom-nav' href='index.php' style = 'color: white; opacity:0.6;  text-align: CENTER; font-size: 25px; letter-spacing: 1.5px;
+              '> <i class='fas fa-fire-alt'></i> Rentro</a>
+              <p class = 'small-text' style = 'margin-top: 10px; text-align: CENTER; '> &copy 2018-2019, Quentrum Corporation </p> 
+         </div> 
     <script>
      AOS.init();
      //getting the location
      $.get("http://ipinfo.io", function (response) {
       $("#ip").html("IP: " + response.ip);
-      $("#address").html("Location: " + response.city + ", " + response.region);
+      $("#address").html(response.city + ", " + response.region);
      }, "jsonp");
     </script>
   </body>

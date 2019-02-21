@@ -58,7 +58,7 @@ a{
 #upper-nav-ul{
     padding-top: 15px;
     position: absolute;
-    right: 5px;
+    right: 10px;
 }
 
 .upper-nav-li{
@@ -227,4 +227,72 @@ a{
   margin-left: 25px; 
   margin-top: 50px; 
   letter-spacing: 0.5px;
+  font-size: 35px;
+}
+
+.display-p{
+    margin-left: 35px;
+    margin-top: 18px;
+}
+
+#address{
+    color: #2083bf;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 18px;
+    margin-left: 7px;
+}
+
+.location-text{
+  display: inline-flex;
+}
+
+
+/********* FOR THE FOOTER **********/
+.navFooter{
+      position: relative;
+      clear: both; 
+      width: 100%; 
+      background: #1a5379;
+      padding-top: 10px;
+    padding-bottom: 10px;
+      text-align: CENTER;
+      color: grey;
+      margin-top: 100px;
+      bottom: 0;
+      left: 0; 
+}
+
+.navFooter-ul{
+      padding-inline-start: 0em; 
+      margin-block-start: 0em; 
+      list-style-type: none; 
+      display: inline-flex;
+      width: 70%; 
+      margin-top: 30px; 
+      margin-bottom: 30px; 
+      margin-left: 15%; 
+      margin-right: 15%;  
+}
+
+.navFooter-li-primary{
+    font-size: 22px;
+    font-weight: 400;
+    width: 100%;
+    opacity: 0.7;
+    color: white;
+}
+
+.navFooter-li-secondary{
+    font-size: 12px;
+    display: list-item;
+    text-align: CENTER;
+} 
+
+.first-link{
+    margin-top: 10px; 
+}
+
+.bottom-nav:hover{
+  text-decoration: none; 
 }
