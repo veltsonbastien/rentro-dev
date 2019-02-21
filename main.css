@@ -47,10 +47,12 @@ padding: 0;
 ul{
  list-style-type: none;
  margin-block-start: 0em;
+ z-index: 2;
 }
 
 a{
   text-decoration: none;
+  z-index: 2;
 }
 
 #upper-nav-ul{
@@ -65,6 +67,11 @@ a{
     font-size: 18px;
     color: white;
     font-weight: 100;
+}
+
+.header-links:hover{
+ text-shadow: 0.1px 0.1px white;
+ cursor: pointer;
 }
 
 .rounded{
@@ -146,6 +153,7 @@ a{
     font-family: inherit;
     border-radius: 5px;
     outline: none;
+    z-index: 3;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -161,6 +169,10 @@ a{
   color: #AAA;
 }
 
+.logo{
+  z-index: 2;
+}
+
 .box {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -171,6 +183,8 @@ a{
   overflow: hidden;
   transform: translate3d(0, 0, 0);
   position: absolute;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .wave {
@@ -187,6 +201,7 @@ a{
   border-radius: 43%;
   animation: drift 17s infinite linear;
   position: absolute;
+  pointer-events: none;
 }
 
 .wave.-three {
@@ -199,19 +214,17 @@ a{
   background: #1a5379;
 }
 
-.box:after {
-  content: '';
-  display: block;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(#1a5379, 1), rgba(#2083bf, 0) 80%, rgba(white, .5));
-  z-index: -1;
-  transform: translate3d(0, 0, 0);
-}
-
 @keyframes drift {
   from { transform: rotate(0deg); }
   from { transform: rotate(360deg); }
+}
+
+/****************************************************/ 
+/*** INDEX AFTER HERO **********/ 
+
+.display-1{
+  color: #444;
+  margin-left: 25px; 
+  margin-top: 50px; 
+  letter-spacing: 0.5px;
 }
