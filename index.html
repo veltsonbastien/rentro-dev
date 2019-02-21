@@ -7,38 +7,45 @@
   <meta name='keywords' content='rent,rental'>
   <meta name='author' content='Quentrum Corp. 2018'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
   <link rel = 'stylesheet' href = 'main.css'>
  </head>
   <body>
    <div class = 'container-fluid'>
           <div class = 'header-container'>
-             <div class = 'logo'>
+             <div class = 'logo' data-aos="fade-right" data-aos-duration="300">
             <a class='navbar-brand' href='index.php' style = 'color: #55efc4; font-size: 45px; letter-spacing: 1.5px; position: absolute; left: 30px; top: 30px;
             '> <i class='fas fa-fire-alt'></i> Rentro</a>
               </div>
                 <div class = 'upper-navigation'>
                   <ul id = 'upper-nav-ul'> 
-                    <li class = 'upper-nav-li'> I'm a Renter </li>
-                    <li class = 'upper-nav-li'> I'm a Lender </li>
-                    <li class = 'upper-nav-li rounded'> Login </li>
-                    <li class = 'upper-nav-li rounded'> Sign Up </li>
+                    <li class = 'upper-nav-li' data-aos="fade-left" data-aos-duration="500"> I'm a Renter </li>
+                    <li class = 'upper-nav-li' data-aos="fade-left" data-aos-duration="700"> I'm a Lender </li>
+                    <li class = 'upper-nav-li rounded' data-aos="fade-left" data-aos-duration="900" > Login </li>
+                    <li class = 'upper-nav-li rounded' data-aos="fade-left" data-aos-duration="1100" > Sign Up </li>
                   </ul>
                 </div>
                     <div class = 'hero-header'> 
                         <div class = 'hero'> 
+                          <div class='box'>
+                            <div class='wave -one'></div>
+                            <div class='wave -two'></div>
+                            <div class='wave -three'></div>
+                          </div>
                               <div class = 'hero-header-text'>
-                                  <h1 id = 'hero-h1'><span>Make some</span></h1>
-                                  <h1 id = 'hero-h1'><span>or</span></h1>
-                                  <h1 id = 'hero-h1'><span>Save some</span></h1>
+                                  <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="500"><span>Make some</span></h1>
+                                  <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="750"><span>or</span></h1>
+                                  <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="1000"><span>Save some</span></h1>
                              </div>
                              <div class = 'hero-header-form'>
-                                <h2 id = 'what'> Looking for something great at a low price?</h2>
+                                <h2 id = 'what' data-aos="zoom-in-up" data-aos-duration="300"> Looking for something great at a low price?</h2>
                                 <form id = 'hero-form'>
-                                  <label class = 'hero-form-label'> What is it? </label>
-                                  <input class = 'hero-form-input' type = 'text' placeholder='Start searching here...'> 
-                                  <label class = 'hero-form-label'> For how long? </label>
-                                  <select class = 'hero-duration-select' form='hero-form'> 
+                                  <label class = 'hero-form-label' data-aos="zoom-in-up" data-aos-duration="500"> What is it? </label>
+                                  <input class = 'hero-form-input' data-aos="zoom-in-up" data-aos-duration="700" type = 'text' placeholder='Start searching here...'> 
+                                  <label class = 'hero-form-label' data-aos="zoom-in-up" data-aos-duration="900"> For how long? </label>
+                                  <select class = 'hero-duration-select' form='hero-form' data-aos="zoom-in-up" data-aos-duration="1100"> 
                                     <option value = '1'> All Durations </option>
                                     <option value = '2'> A Day </option>
                                     <option value = '3'> A Couple Days </option>
@@ -48,11 +55,14 @@
                                     <option value = '7'> A Semester </option>
                                     <option value = '8'> A Full Year </option>
                                   </select>
-                                  <input type = 'button' id = 'hero-form-button' value = 'Search'> 
+                                  <input type = 'button' id = 'hero-form-button' value = 'Search' data-aos="flip-up" data-aos-duration="1500"> 
                                </form>
                              </div>
                        </div>
                </div>
           </div> <!--END OF HEADER CONTAINER --> 
+    <script>
+     AOS.init();
+    </script>
   </body>
   </html>

@@ -97,9 +97,9 @@ a{
 .hero-form-input{
     width: 50%;
     height: 30px;
-    margin-left: 50%;
+    margin-left: 25%; 
     margin-top: 15px;
-    transform: translateX(-50%);
+
     border: 4px solid #1a5379;
     font-size: 25px;
     border-top: none;
@@ -122,11 +122,10 @@ a{
 }
 
 .hero-duration-select{
-    margin-left: 50%;
-    transform: translateX(-50%);
+    margin-left: 25%;
     margin-top: 22px;
     display: block;
-    width: 51%;
+    width: 50%;
     color: #1a5379;
     font-size: 24px;
     text-align: center;
@@ -162,6 +161,57 @@ a{
   color: #AAA;
 }
 
-.logo{
-  
+.box {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  border-radius: 5px;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 10%);
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+}
+
+.wave {
+  opacity: .1;
+  position: absolute;
+  top: 3%;
+  left: 12%;
+  background: #2083bf;
+  width: -webkit-fill-available;
+  height: 5000px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 17s infinite linear;
+  position: absolute;
+}
+
+.wave.-three {
+  animation: drift 14s infinite linear;
+}
+
+.wave.-two {
+  animation: drift 20s infinite linear;
+  opacity: .1;
+  background: #1a5379;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(#1a5379, 1), rgba(#2083bf, 0) 80%, rgba(white, .5));
+  z-index: -1;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
 }
