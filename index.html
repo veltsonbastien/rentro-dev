@@ -9,9 +9,12 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+ <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.6.3/css/all.css' integrity='sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/' crossorigin='anonymous'>
-  <link rel = 'stylesheet' href = 'main.css'>
+  <link rel = 'stylesheet' href = 'main2.css'>
  </head>
   <body>
    <div class = 'container-fluid'>
@@ -63,15 +66,21 @@
                </div>
           </div> <!--END OF HEADER CONTAINER --> 
           <div class = 'main-body'>
-             <h1 class = 'display-1' data-aos="zoom-in-up" data-aos-duration="500"> Newest Items </h1>
+             <h1 class = 'display-1' data-aos="" data-aos-duration="500"> Newest Items </h1>
              <span class = 'location-text'>
-                <p class = 'display-p' data-aos="zoom-in-up" data-aos-duration="500"> Showing you the latest deals from your area:</p>
-               <div id="address" data-aos="zoom-in-left" data-aos-duration="500"></div>
+                <p class = 'display-p' data-aos="" data-aos-duration="500"> Showing you the latest deals from your area:</p>
+               <div id="address" data-aos="" data-aos-duration="500"></div>
              </span>
              <!--PROTOTYPE FOR THE ITEM BOXES --> 
-             <div class = 'main-product'>
-
+             <div class = 'main-rentro-ad'>
+                 <h2><span>Welcome to Rentro!</span></h2>
+                 <h2><span>A platform from a UCSB based startup focused on helping college students survive the large financial toll of an education.</span></h2>
              </div>
+
+            <div id="firebaseui-auth-container"> 
+              <h2 id="cantwait"><span>Yeah, we can't wait either</span></h2>
+              <h2 id="pleasesign"><span>Even if the site isn't up yet, you can still create an account! We'll send you an email once we launch.</span></h2>
+            </div>
 
           </div> <!--END OF MAIN BODY --> 
            <div class = 'footer navFooter'>
@@ -88,18 +97,77 @@
                   <a class = 'navFooter-li-secondary'>Terms of Use</a>
                 </li> 
             </ul> 
-            <hr style = 'color: grey;'> 
+            <hr style = 'color: grey; margin-bottom: 25px;'> 
               <a class='bottom-nav' href='index.php' style = 'color: white; opacity:0.6;  text-align: CENTER; font-size: 25px; letter-spacing: 1.5px;
               '> <i class='fas fa-fire-alt'></i> Rentro</a>
               <p class = 'small-text' style = 'margin-top: 10px; text-align: CENTER; '> &copy 2018-2019, Quentrum Corporation </p> 
          </div> 
     <script>
+     $(document).ready(function(){
      AOS.init();
-     //getting the location
-     $.get("http://ipinfo.io", function (response) {
-      $("#ip").html("IP: " + response.ip);
-      $("#address").html(response.city + ", " + response.region);
-     }, "jsonp");
+            //getting the location
+            $.get("http://ipinfo.io", function (response) {
+            $("#ip").html("IP: " + response.ip);
+            $("#address").html(response.city + ", " + response.region);
+            }, "jsonp");
+            }); 
+    </script> 
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDiRNk24nc-FI8MC6_DqfF2tBBz3fQVRjc",
+        authDomain: "rentro-official00.firebaseapp.com",
+        databaseURL: "https://rentro-official00.firebaseio.com",
+        projectId: "rentro-official00",
+        storageBucket: "rentro-official00.appspot.com",
+        messagingSenderId: "45495480751"
+    };
+    firebase.initializeApp(config);
+        var uiConfig = {
+        signInSuccessUrl: 'index.html',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        ],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback
+        // function.
+        // Terms of service url/callback.
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: function() {
+          window.location.assign('<your-privacy-policy-url>');
+        }
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+    //  if (ui.isPendingRedirect()) {
+        ui.start('#firebaseui-auth-container', uiConfig); 
+    //  }
+
+        // ui.start('#firebaseui-auth-container', {
+        // signInOptions: [
+        //     {
+        //     // Google provider must be enabled in Firebase Console to support one-tap
+        //     // sign-up.
+        //     provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        //     // Required to enable this provider in one-tap sign-up.
+        //     authMethod: 'https://accounts.google.com',
+        //     // Required to enable ID token credentials for this provider.
+        //     // This can be obtained from the Credentials page of the Google APIs
+        //     // console.
+        //     clientId: 'xxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
+        //     },
+        //     firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        //     firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        // ],
+        // // Required to enable one-tap sign-up credential helper.
+        // credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO
+        // });
+
     </script>
   </body>
   </html>
