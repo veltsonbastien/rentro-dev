@@ -28,16 +28,28 @@ padding: 0;
 }
 
 .hero-header{
-  height: 70vh; 
-  color: white;
-  margin-top: 0px;
-  position: relative;
+    height: 70vh;
+    width: 100%;
+    color: white;
+    margin-top: 0px;
+    display: inline-flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero{
+    display: inline-flex;
+    width: -webkit-fill-available;
+    height: 70%;
+    margin-top: 21%;
+    transform: translateY(-50%);
+    margin-left: 14%;
+    margin-right: 14%;
 }
 
 .hero-header-text{
      font-size: 48px;
-    position: absolute;
-    transform: translate(38%, 60%);
+     width:100%;
 }
 
 #hero-h1{
@@ -57,9 +69,6 @@ a{
 
 #upper-nav-ul{
     padding-top: 15px;
- /*   position: absolute;
-    right: 10px;
-    Doesn't work on smaller screen */
     margin-left: 67%;  
 }
 
@@ -69,6 +78,7 @@ a{
     font-size: 18px;
     color: white;
     font-weight: 100;
+    flex-wrap: wrap;
 }
 
 .header-links:hover{
@@ -84,10 +94,7 @@ a{
 
 
 .hero-header-form{
-  width: 40%;
-  position: absolute;
-  transform: translate(106vh,20vh);
-  /*transform: translate(100vh,28vh); FOR LARGER SCREENS */ 
+  width: 100%;
 }
 
 #what{
@@ -332,4 +339,3 @@ a{
     font-weight: 400;
     margin-bottom: 50px; 
 }
-

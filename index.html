@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
   <html> 
   <head>
+  <title> Rentro | Make Some or Save Some </title>
   <!--METAS-->
   <meta charset='UTF-8'>
   <meta name='description' content='Make Some or Save Some.'>
@@ -32,12 +33,12 @@
                   </ul>
                 </div>
                     <div class = 'hero-header'> 
-                        <div class = 'hero'> 
-                          <div class='box'>
+                                                <div class='box'>
                             <div class='wave -one'></div>
                             <div class='wave -two'></div>
                             <div class='wave -three'></div>
                           </div>
+                        <div class = 'hero'> 
                               <div class = 'hero-header-text'>
                                   <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="500"><span>Make some</span></h1>
                                   <h1 id = 'hero-h1' data-aos="fade-up" data-aos-duration="750"><span>or</span></h1>
@@ -62,7 +63,7 @@
                                   <input type = 'button' id = 'hero-form-button' value = 'Search' data-aos="flip-up" data-aos-duration="1500"> 
                                </form>
                              </div>
-                       </div>
+                       </div> <!--END OF 'hero'-->
                </div>
           </div> <!--END OF HEADER CONTAINER --> 
           <div class = 'main-body'>
@@ -140,14 +141,12 @@
           window.location.assign('<your-privacy-policy-url>');
         }
       };
-
       // Initialize the FirebaseUI Widget using Firebase.
       var ui = new firebaseui.auth.AuthUI(firebase.auth());
       // The start method will wait until the DOM is loaded.
     //  if (ui.isPendingRedirect()) {
         ui.start('#firebaseui-auth-container', uiConfig); 
     //  }
-
         // ui.start('#firebaseui-auth-container', {
         // signInOptions: [
         //     {
@@ -167,7 +166,6 @@
         // // Required to enable one-tap sign-up credential helper.
         // credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO
         // });
-
     </script>
   </body>
   </html>
