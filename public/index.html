@@ -70,7 +70,7 @@
             <div class = 'main-body'>
                 <div class = 'background-video-div'>
                     <video autoplay muted loop id="background-video">
-                        <source src="images/background-video.mp4" type="video/mp4">
+                        <source src="img/background-video.mp4" type="video/mp4">
                     </video>
                 </div>
                 <h1 class = 'display-1' data-aos="" data-aos-duration="500"> Newest Items </h1>
@@ -115,7 +115,7 @@
                 $(document).ready(function(){
                     AOS.init();
                     //getting the location
-                    $.get("http://ipinfo.io", function (response) {
+                    $.get("https://ipinfo.io", function (response) {
                         $("#ip").html("IP: " + response.ip);
                         $("#address").html(response.city + ", " + response.region);
                     }, "jsonp");

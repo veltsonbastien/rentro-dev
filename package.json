@@ -8,7 +8,7 @@
     "browserify": "^16.2.3"
   },
   "scripts": {
-      "build": "cp -r ./css ./public && cp -r ./js ./public && cp index.html ./public",
+      "build": "cp -r ./css ./js ./img ./index.html ./public",
       "deploy": "firebase deploy --only hosting"
 
   },
