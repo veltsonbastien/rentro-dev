@@ -54,8 +54,6 @@ ui.start('#firebaseui-auth-container', {
         firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
     ],
-    // Required to enable one-tap sign-up credential helper.
-    credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO
 });
 const initApp = function() {
     firebase.auth().onAuthStateChanged(function(user) {
