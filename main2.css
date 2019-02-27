@@ -31,7 +31,7 @@ padding: 0;
     height: 70vh;
     width: 100%;
     color: white;
-    margin-top: 0px;
+    margin-top: 30px;
     display: inline-flex;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -104,8 +104,10 @@ a{
     text-align: center;
     font-weight:400;
     font-size: 30px;
+    /** 28 for Laptops **/ 
     color: #e6e6e6;
 }
+
 
 .hero-form-input{
     width: 50%;
@@ -149,6 +151,9 @@ a{
     transform: translateX(-50%);
     margin-left: 50%;
     margin-top: 35px;
+    /* 
+    * margin top: 0 for desktop (shorter height) 
+    */ 
     padding: 6px 20px;
     background: none;
     border: 1px solid #55efc4;
@@ -234,6 +239,19 @@ a{
   100% {box-shadow: none;  }
 }
 
+
+
+/*** BACKGROUND VIDEO **/ 
+#background-video{
+    width: -webkit-fill-available;
+    opacity: 0.05;
+    position: absolute;
+    top: -10vw;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
 /****************************************************/ 
 /*** INDEX AFTER HERO **********/ 
 
@@ -317,8 +335,6 @@ a{
 #firebaseui-auth-container{
     border: 4px solid #2083bf;
     width: 25%;
-    margin-left: 50%;
-    transform: translateX(-50%);
     background: white;
     border-radius: 10px;
     margin-top: 70px;
@@ -338,4 +354,43 @@ a{
     text-align: center;
     font-weight: 400;
     margin-bottom: 50px; 
+}
+
+.middle-content{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+/**Main Rentro Ad**/ 
+.main-rentro-ad{ 
+ width: 65%; 
+ margin-top: 70px; 
+ border-radius: 10px;
+ background: white;  
+}
+
+#main-ad-h2{
+ margin-top: 10px; 
+ margin-left: 10px; 
+ font-size: 30px; 
+ color: #222; 
+ font-weight: 400; 
+}
+
+#main-ad-p{
+    margin-top: 20px;
+    margin-left: 15px;
+    font-weight: 300;
+}
+
+
+/** MEDIA QUERIES **/ 
+@media screen and (min-width: 1224px){
+  /** DESKTOP BREAKPOINTS **/
+  #what{
+    font-size: 28px; 
+  }
+  .hero-header-text{
+    font-size: 42px; 
+  }
 }

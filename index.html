@@ -67,21 +67,28 @@
                </div>
           </div> <!--END OF HEADER CONTAINER --> 
           <div class = 'main-body'>
+            <div class = 'background-video-div'>
+              <video autoplay muted loop id="background-video">
+              <source src="images/background-video.mp4" type="video/mp4">
+              </video>
+            </div>
              <h1 class = 'display-1' data-aos="" data-aos-duration="500"> Newest Items </h1>
              <span class = 'location-text'>
-                <p class = 'display-p' data-aos="" data-aos-duration="500"> Showing you the latest deals from your area:</p>
+                <p class = 'display-p' data-aos="" data-aos-duration="500"> Will soon be showing you the latest deals from your area:</p>
                <div id="address" data-aos="" data-aos-duration="500"></div>
              </span>
+             <div class = 'middle-content'> 
              <!--PROTOTYPE FOR THE ITEM BOXES --> 
              <div class = 'main-rentro-ad'>
-                 <h2><span>Welcome to Rentro!</span></h2>
-                 <h2><span>A platform from a UCSB based startup focused on helping college students survive the large financial toll of an education.</span></h2>
+                 <h2 id='main-ad-h2'><span>Welcome to Rentro</span></h2>
+                 <h2 id='main-ad-p'><span>A platform from a UCSB based startup focused on helping college students survive the large financial toll of an education.</span></h2>
              </div>
 
             <div id="firebaseui-auth-container"> 
               <h2 id="cantwait"><span>Yeah, we can't wait either</span></h2>
               <h2 id="pleasesign"><span>Even if the site isn't up yet, you can still create an account! We'll send you an email once we launch.</span></h2>
             </div>
+            </div> <!--END OF MIDDLE CONTENT -->
 
           </div> <!--END OF MAIN BODY --> 
            <div class = 'footer navFooter'>
