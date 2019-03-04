@@ -197,6 +197,11 @@ a:visited, a:focus{
   z-index: 2;
 }
 
+#logo-short{
+    margin-top: -10px;
+    margin-bottom: -35px;
+}
+
 .box {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
@@ -429,6 +434,11 @@ a:visited, a:focus{
     text-align: CENTER; 
     padding: 11px 5px;
     border-radius: 5px; 
+    transition: box-shadow 0.7s; 
+}
+
+.why-rentro-li:hover{
+   box-shadow: 0.1px 0.1px 50px #BBB; 
 }
 
 .why-rentro-div{
@@ -439,18 +449,119 @@ a:visited, a:focus{
 .why-rentro-box-h1{
     width: 100%;
     margin-bottom: 30px; 
+    text-align: center; 
+}
+
+.why-rentro-box-p{
+  text-align: CENTER; 
 }
 
 .why-rentro-icon{
     width: 100%;
     margin-top: 10px;
     font-size: 85px;
-    color: #55efc4; 
+    color: #00b482; 
     margin-bottom: 20px; 
 }
 
 
+#SI-img{
+    width: 100%;
+    height: 50%;
+    margin-top: 30px; 
+}
 
-.why-rentro-box-p{
+.SI-info-boxes{
+    list-style-type: none;  
+    margin-top: 35px; 
+    padding-inline-start: 0px;
+    margin: 0px 30px;
+}
 
+.SI-inline-link{
+    color:#337ab7;
+    
+}
+
+.SI-info-boxes-h3{
+  margin-bottom: 10px; 
+}
+
+.SI-info-boxes-li{
+    margin-top: 30px;
+    background: #f9f9f9; 
+    border-radius: 3px; 
+    padding-left: 180px;
+    padding-right: 50px;
+    transition: box-shadow 0.3s; 
+    transition: transform 0.3s; 
+    transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    -webkit-transition-timing-function: linear;
+}
+
+.SI-info-boxes-li:hover{
+    box-shadow: 0.1px 0.1px 10px #999; 
+    transform: scale(1.01); 
+    cursor: pointer; 
+}
+
+
+
+.SI-info-boxes-span{
+    padding: 5px; 
+}
+
+.SI-info-boxes-p{
+    margin-left: 10px; 
+	justify-content: flex-wrap;
+	min-width: 200px;
+}
+
+.fa-user-plus, .fa-shipping-fast, .fa-clock,
+.fa-shopping-cart, .fa-smile, .fa-exchange-alt{
+    position: relative;
+    vertical-align: middle;
+    left: -140px; 
+   	top: 75px;
+    margin-top: -75px;
+    font-size: 90px; 
+    color: lightgrey;
+}
+
+.SI-bottom-text{
+    margin-top: 80px; 
+    text-align: CENTER;
+}
+
+#safe-ul{
+ margin: 0px 30px; 
+ margin-top: 30px; 
+}
+
+.safe-li{
+    background: white;
+    padding: 10px;
+    margin: 0px 10px;
+    width: 30%;
+    display: inline-flex;
+    border-radius: 5px; 
+    transition: box-shadow 0.7s; 
+}
+
+.safe-li:hover{
+  box-shadow: 0.1px 0.1px 50px #BBB; 
+}
+
+.safe-div{
+ width: 100%; 
+ padding: 10px;
+}
+
+.safe-icon{
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: lightgrey; 
 }

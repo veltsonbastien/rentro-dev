@@ -21,11 +21,11 @@
     <body>
         <div class='container-fluid'>
             <div class='header-container'>
-                <div class='logo'>
-                    <a class='navbar-brand' href='index.html' style = 'color: #55efc4; font-size: 45px; letter-spacing: 1.5px; position: absolute; left: 30px; top: 30px; z-index: 5;
+                <div class='logo' id='logo-short'>
+                    <a class='navbar-brand' href='index.html' style = 'color: #55efc4; font-size: 45px; letter-spacing: 1.5px; position: relative; left: 30px; top: 30px; z-index: 5;
                     '> <i class='fas fa-fire-alt'></i> Rentro</a>
                 </div>
-                <div class='upper-navigation'>
+                <div class='upper-navigation' style = 'margin-top: 15px; margin-bottom: -30px; '>
                     <ul id='upper-nav-ul'> 
                         <li class='upper-nav-li'> <a class = 'header-links'> Become a Lender  </a> </li>
                         <li class='upper-nav-li'> <a class = 'header-links'> Why Rentro? </a> </li>
@@ -74,7 +74,104 @@
                    </div>
                   </li>
                </ul> 
+
+               <h1 class = 'display-1' id='why-why'>It's easy and safe to use</h1>
+               <h2 id = 'why-rentro-upper'>As a lender all you need to do is: </h2>
+
+                    <ul class = "SI-info-boxes"> 
+                    <li class = "SI-info-boxes-li"> 
+                        <span class = "SI-info-boxes-span">
+                        <i class="fas fa-user-plus"></i>
+                        <h3 class = "SI-infoboxes-h3"> Register </h3> 
+                        <p class = "SI-info-boxes-p"> If you haven't already, <a class="SI-inline-link" href="create-account.php">create an account.</a> Then you will simply register your item. Don't worry, there will be steps on how to do it to best ensure the safety of your device and the satisfaction of the customer who uses it. Registration should take about 15 minutes.  </p> 
+                        </span>
+                    </li>
+                    <li class = "SI-info-boxes-li"> 
+                        <span class = "SI-info-boxes-span">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h3 class = "SI-infoboxes-h3"> Ship </h3> 
+                        <p class = "SI-info-boxes-p"> Once you get a match for your item, you will ship it to the waiting customer. You will receive all the information you need to do so. Please be sure to include everything needed in the package, and also be sure to package properly. Once that is complete, you can pretty much call it done.  </p> 
+                        </span>
+                    </li>
+                    <li class = "SI-info-boxes-li"> 
+                        <span class = "SI-info-boxes-span">
+                        <i class="far fa-clock"></i>
+                        <h3 class = "SI-infoboxes-h3"> Wait </h3> 
+                        <p class = "SI-info-boxes-p"> The easy but hard part. This is what defines Rentro for you, the seller. The longer your item stays on the market, the more chances we have to get it out to waiting customers -- and, the more you are able to earn.  </p> 
+                        </span>
+                    </li>
+                </ul>
+
+                <h2 id = 'why-rentro-upper'>And as a renter all you need to do is: </h2>
+                <ul class = "SI-info-boxes"> 
+                    <li class = "SI-info-boxes-li"> 
+                        <span class = "SI-info-boxes-span">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3 class = "SI-infoboxes-h3"> Rent </h3> 
+                        <p class = "SI-info-boxes-p"> If you haven't already, <a class = "SI-inline-link" href = "create-account.php">create an account.</a> Next, browse our collection of items that have been put up for rent, and choose what it is you would like to rent out. There will be more directions and information when you are ready to purchase.  </p> 
+                        </span>
+                    </li>
+                    <li class = "SI-info-boxes-li"> 
+                        <span class = "SI-info-boxes-span">
+                        <i class="far fa-smile"></i>
+                        <h3 class = "SI-infoboxes-h3"> Enjoy </h3> 
+                        <p class = "SI-info-boxes-p"> The fun part. Responsibly use the item that you purchased for the amount of time you agreed to during purchase. From that time of purchase to the time you return the item, you're legally responsible for it -so make the most of your time.   </p> 
+                        </span>
+                    </li>
+                    <li class = "SI-info-boxes-li"> 
+                        <span class = "SI-info-boxes-span">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3 class = "SI-infoboxes-h3"> Return </h3> 
+                        <p class = "SI-info-boxes-p"> Package and ship back the item once you are done using it. Please be sure to remember to include everything that came with the item, and also be sure to package appropriately (e.g, using "Fragile" when needed.) </p> 
+                        </span>
+                    </li>
+                </ul>
+
+                <h2 id = 'why-rentro-upper'>It's safe because: </h2>
+                <ul id = 'safe-ul'> 
+                  <li class = 'safe-li'>
+                    <div class = 'safe-div'> 
+                    <h1 class = 'safe-icon'><i class="fas fa-id-card-alt"></i></h1>
+                     <h1 class = 'why-rentro-box-h1'>Users are Verified</h1>
+                     <p class = 'why-rentro-box-p'>We safely store verified information on all Rentro users. This is to verify everyone's identity and so that you know who it is you are in business with. </p>
+                    </div>
+                  </li> 
+                  <li class = 'safe-li'>
+                    <div class = 'safe-div'> 
+                     <h1 class = 'safe-icon'><i class="fas fa-check"></i></h1>
+                     <h1 class = 'why-rentro-box-h1'>We Review Posts</h1>
+                     <p class = 'why-rentro-box-p'> We take the time to go through each post that is on our site. We want to ensure that posts follow our guidelines, and keep everyone safe. </p>
+                    </div>                   
+                  </li> 
+                  <li class = 'safe-li'>
+                    <div class = 'safe-div'> 
+                       <h1 class = 'safe-icon'><i class="fas fa-users"></i></h1>
+                       <h1 class = 'why-rentro-box-h1'>Help From The Community</h1>
+                       <p class = 'why-rentro-box-p'>We encourage users on Rentro to report posts that are not following guidelines. This is to add to the amount of safety on our site. </p>
+                    </div>                   
+                  </li> 
+                </ul>
+
             </div> <!--END OF MAIN BODY CONTAINER-->
+             <div class = 'footer navFooter'>
+                <ul class = 'navFooter-ul'> 
+                    <li class = 'navFooter-li-primary'> Why Rentro?
+                        <a class = 'navFooter-li-secondary first-link'>About Us</a> 
+                    </li> 
+                    <li class = 'navFooter-li-primary'> Connect With Us
+                        <a class = 'navFooter-li-secondary first-link'>On Twitter: @rentro </a> 
+                        <a class = 'navFooter-li-secondary'>On Instagram: @rentro </a> 
+                    </li> 
+                    <li class = 'navFooter-li-primary'> Resources
+                        <a class = 'navFooter-li-secondary first-link' href='customer-service.php'>Customer Services</a> 
+                        <a class = 'navFooter-li-secondary'>Terms of Use</a>
+                    </li> 
+                </ul> 
+                <hr style = 'color: grey; margin-bottom: 25px;'> 
+                <a class='bottom-nav' href='index.html' style = 'color: white; opacity:0.6;  text-align: CENTER; font-size: 25px; letter-spacing: 1.5px;
+                '> <i class='fas fa-fire-alt'></i> Rentro</a>
+                <p class = 'small-text' style = 'margin-top: 10px; text-align: CENTER; '> &copy 2018-2019, Quentrum Corporation </p> 
+            </div> 
         </div>
     </body>
 </html>
