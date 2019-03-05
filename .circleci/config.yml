@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+    docker:
+      - image: seitauc/docker-hugo-firebase:latest
+    steps:
+      - checkout
+        # install git submodules for managing third-party dependencies
+      - run: git submodule sync && git submodule update --init
+      - run:
+          name: Build Hugo Website
+          command: hugo -t hugo-icarus-theme
+      - deploy:
+          name: Deploy Website to Firebase Hosting
+          branch: master
+          command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --project seita-blog --only hosting
