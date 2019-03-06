@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "firebase-tools": "^6.4.0"
+  },
   "devDependencies": {
     "browserify": "^16.2.3"
   },
   "scripts": {
-      "build": "cp -r ./css ./js ./img ./index.html ./public",
-      "deploy": "firebase deploy --only hosting"
-
+    "build": "cp -r ./css ./js ./img ./index.html ./public",
+    "deploy": "firebase deploy --only hosting"
   },
   "repository": {
-      "type": "git",
-      "url": "git+ssh://git@github.com/veltsonbastien/rentro-dev.git"
+    "type": "git",
+    "url": "git+ssh://git@github.com/veltsonbastien/rentro-dev.git"
   },
   "author": "",
   "license": "ISC",
