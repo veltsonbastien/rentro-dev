@@ -1,19 +1,52 @@
 version: 2
+
 jobs:
   build:
-    branches:
-      only:
-        - master
+    working_directory: ~/workspace
     docker:
-      - image: seitauc/docker-hugo-firebase:latest
+      - image: circleci/node:9.4.0
     steps:
       - checkout
-        # install git submodules for managing third-party dependencies
-      - run: git submodule sync && git submodule update --init
+      - restore_cache:
+          keys:
+            - npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
-          name: Build Hugo Website
-          command: hugo -t hugo-icarus-theme
+          name: Install Dependency
+          command: npm install
+      - run:
+          name: Build
+          command: npm run build
+      - save_cache:
+          key: npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/workspace/node_modules
+            - ~/workspace/dist
+          force: yes
+
+  deploy:
+    working_directory: ~/workspace
+    docker:
+      - image: circleci/node:9.4.0
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - npm-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install Dependency
+          command: npm install
+      - run:
+          name: deploy
+          command: ./node_modules/.bin/firebase deploy --only hosting --project "$FIREBASE_PROJECT_ID" --token "$FIREBASE_TOKEN"
+
+workflows:
+  version: 2
+  build_deploy:
+    jobs:
+      - build
       - deploy:
-          name: Deploy Website to Firebase Hosting
-          branch: master
-          command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --project seita-blog --only hosting
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
